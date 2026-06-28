@@ -2418,6 +2418,7 @@ function saveMonthlyDecision(){
   // Restore state if returning user
   if(S.calcDone) updateJBar(S.loggedIn?'s3':S.profileDone?'s2':'s1');
   else updateJBar('s0');
+  goScreen('s0');
   // If logged in, show dashboard directly
   if(S.loggedIn && document.getElementById('s0').classList.contains('active')){
     // Stay on landing for now, let user navigate
