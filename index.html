@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)file:///C:/Users/charl/Downloads/index%20(1).html -->
+<!-- saved from url=(0049)file:///C:/Users/charl/Downloads/index%20(2).html -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SolviRet · Tu Viaje Financiero</title>
@@ -8,6 +8,7 @@
 <link href="./index_files/css2" rel="stylesheet">
 <style>
   /* ══ TOKENS ══ */
+
 :root{
   --ink:#0E0F0D; --ink-60:rgba(14,15,13,.6); --ink-30:rgba(14,15,13,.3); --ink-10:rgba(14,15,13,.08);
   --paper:#F2EFE6; --paper-d:#E6E2D6; --white:#FDFCF8; --mist:#CED0C7;
@@ -52,7 +53,6 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
 .btn:hover .arr{transform:translateX(3px);}
 .eye{font-family:'DM Mono',monospace;font-size:.63rem;color:var(--sage);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
 .eye::before{content:'';width:22px;height:1px;background:var(--sage);}
-.serif{font-family:'Cormorant Garamond',serif;}
 .field{margin-bottom:16px;}
 .field label{display:block;font-size:.76rem;font-weight:600;color:var(--ink-60);margin-bottom:6px;}
 .field input,.field select{width:100%;padding:11px 14px;background:var(--paper);border:1.5px solid var(--mist);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.92rem;color:var(--ink);outline:none;transition:border-color .2s;appearance:none;}
@@ -62,6 +62,8 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
 .ins-t{font-size:.82rem;color:var(--ink);line-height:1.55;}
 .ins-t strong{color:var(--sage-d);}
 #s0{background:var(--ink);position:relative;overflow:hidden;}
+.s0-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(107,158,122,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(107,158,122,.07) 1px,transparent 1px);background-size:44px 44px;}
+.s0-glow{position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 65% 25%,rgba(74,124,89,.2) 0%,transparent 60%),radial-gradient(ellipse 40% 35% at 20% 75%,rgba(184,135,42,.12) 0%,transparent 50%);}
 .s0-body{position:relative;z-index:2;min-height:calc(100vh - 56px);display:grid;grid-template-columns:1fr 1fr;}
 .s0-left{padding:72px 48px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.08);}
 .s0-right{padding:72px 48px;display:flex;flex-direction:column;justify-content:center;background:rgba(255,255,255,.03);}
@@ -85,15 +87,6 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
 .jc-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#fff;margin-bottom:3px;}
 .jc-sub{font-size:.78rem;color:rgba(253,252,248,.45);line-height:1.5;}
 .jc-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:.9rem;color:rgba(253,252,248,.3);}
-.chart-container{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px 18px 18px;margin-bottom:18px;}
-#urgChart{display:block;width:100%!important;}
-.chart-legend-dark{display:flex;flex-direction:column;gap:7px;}
-.cld-item{display:flex;align-items:center;gap:8px;font-size:.76rem;color:rgba(253,252,248,.5);}
-.cld-line{width:24px;height:3px;border-radius:100px;flex-shrink:0;}
-.age-chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px;}
-.chip{padding:6px 13px;border-radius:100px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);font-family:'DM Mono',monospace;font-size:.76rem;cursor:pointer;transition:all .2s;color:rgba(253,252,248,.5);}
-.chip:hover{border-color:rgba(107,158,122,.5);color:var(--sage-l);}
-.chip.active{border-color:var(--sage-l);background:rgba(107,158,122,.2);color:var(--sage-l);}
 #s1{background:var(--paper);}
 .s1-layout{display:grid;grid-template-columns:380px 1fr;min-height:calc(100vh - 56px);}
 .s1-form{background:#fff;border-right:1px solid var(--mist);padding:44px 36px;display:flex;flex-direction:column;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;}
@@ -163,6 +156,15 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
 .nc-sub{font-size:.76rem;color:rgba(253,252,248,.5);}
 .nc-arr{width:36px;height:36px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;transition:transform .2s;}
 .next-stage-cta:hover .nc-arr{transform:translateX(4px);}
+.chart-container{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px 18px 18px;margin-bottom:18px;}
+#urgChart{display:block;width:100%!important;}
+.chart-legend-dark{display:flex;flex-direction:column;gap:7px;}
+.cld-item{display:flex;align-items:center;gap:8px;font-size:.76rem;color:rgba(253,252,248,.5);}
+.cld-line{width:24px;height:3px;border-radius:100px;flex-shrink:0;}
+.age-chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px;}
+.chip{padding:6px 13px;border-radius:100px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);font-family:'DM Mono',monospace;font-size:.76rem;cursor:pointer;transition:all .2s;color:rgba(253,252,248,.5);}
+.chip:hover{border-color:rgba(107,158,122,.5);color:var(--sage-l);}
+.chip.active{border-color:var(--sage-l);background:rgba(107,158,122,.2);color:var(--sage-l);}
 #s2{background:var(--paper);}
 .s2-layout{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 56px);}
 .s2-sidebar{background:var(--ink);padding:36px 24px;display:flex;flex-direction:column;position:sticky;top:56px;height:calc(100vh - 56px);overflow:hidden;}
@@ -210,12 +212,12 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
 .poss-rate.c{color:var(--sage);}.poss-rate.m{color:var(--gold);}.poss-rate.a{color:var(--danger);}
 .poss-detail{font-size:.78rem;color:var(--ink-60);margin-top:4px;line-height:1.5;}
 .poss-detail strong{color:var(--ink);font-weight:600;}
-#profileReveal{display:none;background:var(--ink);min-height:calc(100vh - 56px);position:relative;overflow:hidden;}
+#profileReveal{display:none;min-height:calc(100vh - 56px);position:relative;background:var(--paper);}
 #profileReveal.show{display:block;}
+#profileReveal::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 70% at 25% 0%,rgba(74,124,89,.18) 0%,transparent 55%);pointer-events:none;z-index:0;}
 .pr-grid{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 56px);}
-.pr-col-left{background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 36px;position:relative;overflow:hidden;}
+.pr-col-left{background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 36px;position:relative;overflow:hidden;min-height:calc(100vh - 56px);}
 .pr-col-right{background:var(--paper);padding:44px 40px;overflow-y:auto;}
-#profileReveal::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 100% 70% at 50% 0%,rgba(74,124,89,.18) 0%,transparent 55%);}
 .av-wrap{display:flex;justify-content:center;margin-bottom:24px;}
 .avatar{width:108px;height:108px;position:relative;animation:afloat 3s ease-in-out infinite;}
 @keyframes afloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
@@ -301,32 +303,47 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
   .ss-blocks{flex-direction:row;flex-wrap:wrap;gap:12px;}
   .s2-panel,.poss-intro{padding:28px 24px;}
   .dash-right{display:none;}
+  .ih-grid{grid-template-columns:1fr 1fr;}
+  .upd-grid{grid-template-columns:1fr 1fr;}
+  .mod-grid{grid-template-columns:1fr;}
   .pen-grid{grid-template-columns:1fr;}
 }
 @media(max-width:480px){
+  .pr-grid{grid-template-columns:1fr;}
+  .pr-col-left{padding:36px 20px 28px;}
+  .pr-col-right{padding:24px 18px;border-top:1px solid var(--mist);}
+  .sim5d-grid{grid-template-columns:1fr;}
   .s0-body{grid-template-columns:1fr;}
   .s0-left{padding:40px 20px 28px;}
   .s0-right{padding:24px 20px 40px;}
   .s1-layout{grid-template-columns:1fr;}
   .s1-form{padding:24px 18px;position:static;height:auto;border-right:none;border-bottom:1px solid var(--mist);}
   .s1-result{padding:20px 18px;}
+  .tn-breakdown{flex-direction:column;gap:8px;}
+  .pen-grid{grid-template-columns:1fr;}
   .s2-layout{grid-template-columns:1fr;}
   .s2-sidebar{position:static;height:auto;padding:20px 18px;}
+  .ss-blocks{flex-direction:column;gap:8px;}
+  .s2-panel{padding:24px 18px;min-height:auto;}
+  .poss-intro{padding:20px 18px;}
   .dash-layout{grid-template-columns:1fr;}
-  .sim5d-grid{grid-template-columns:1fr;}
-  .pr-grid{grid-template-columns:1fr;}
-  .pr-col-left{padding:36px 20px 28px;}
-  .pr-col-right{padding:24px 18px;border-top:1px solid var(--mist);}
+  .dash-left{position:sticky;top:56px;z-index:10;height:auto;flex-direction:row;flex-wrap:nowrap;overflow-x:auto;padding:6px 8px;scrollbar-width:none;}
+  .dash-left::-webkit-scrollbar{display:none;}
+  .dl-logo,.dl-avatar,.nav-s{display:none;}
+  .dash-left .nav-item{display:inline-block;padding:6px 12px;font-size:.74rem;white-space:nowrap;border-radius:100px;margin:2px;}
+  .dash-main{padding:16px 14px;}
+  .ih-grid{grid-template-columns:1fr;}
+  .upd-grid{grid-template-columns:1fr;}
+  .mod-grid{grid-template-columns:1fr;}
   .btn{padding:12px 20px;font-size:.84rem;}
 }
 </style>
 <style>
 #convSection{display:none;}
-#profileReveal{display:none;}
-#profileReveal.show{display:block;}
 </style>
 </head>
 <body>
+
 <div id="journeyBar">
   <div class="jb-logo">Solvi<em>Ret</em></div>
   <div class="journey-steps">
@@ -345,6 +362,7 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
 </div>
 
 <div class="screen active" id="s0" style="">
+  <div class="s0-grid"></div><div class="s0-glow"></div>
   <div class="s0-body">
     <div class="s0-left">
       <div class="s0-eye">Progresa Soluciones · Beta · Clase C México</div>
@@ -367,7 +385,7 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
         <div class="chip" onclick="selAge0(45,this)">45</div><div class="chip" onclick="selAge0(50,this)">50</div>
         <div class="chip" onclick="selAge0(55,this)">55</div><div class="chip" onclick="selAge0(60,this)">60</div>
       </div>
-      <div class="chart-container fi d2"><canvas id="urgChart" height="452" width="755"></canvas></div>
+      <div class="chart-container fi d2"><canvas id="urgChart" height="302" width="755"></canvas></div>
       <div class="chart-legend-dark fi d2" id="legend0">
         <div class="cld-item"><div class="cld-line" style="background:#4A7C59"></div>Empieza a los 25 — $4,200/mes</div>
         <div class="cld-item"><div class="cld-line" style="background:#B8872A"></div>Empieza a los 40 — $14,800/mes</div>
@@ -398,8 +416,7 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
           <button type="button" class="g-chip sel" onclick="selG(&#39;M&#39;,this)"><span class="g-chip-icon">🧑</span>Hombre</button>
           <button type="button" class="g-chip" onclick="selG(&#39;F&#39;,this)"><span class="g-chip-icon">👩</span>Mujer</button>
           <button type="button" class="g-chip" onclick="selG(&#39;X&#39;,this)"><span class="g-chip-icon">✨</span>No binario</button>
-        </div>
-      </div>
+        </div></div>
       <div class="field"><label>Edad exacta</label><input type="number" id="fAge" min="18" max="70" placeholder="38" oninput="chkForm()"></div>
       <div class="field"><label>Ingreso mensual neto</label>
         <select id="fInc" onchange="chkForm()">
@@ -407,24 +424,21 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
           <option value="15">$10K – $20K</option><option value="30">$20K – $40K</option>
           <option value="55">$40K – $70K</option><option value="90">$70K – $120K</option>
           <option value="150">Más de $120K</option>
-        </select>
-      </div>
+        </select></div>
       <div class="field"><label>Años cotizando IMSS o ISSSTE</label>
         <select id="fYrs" onchange="chkForm()">
           <option value="">— Selecciona —</option>
           <option value="2">Menos de 5</option><option value="7">5 – 10</option>
           <option value="12">10 – 15</option><option value="18">15 – 20</option>
           <option value="25">Más de 20</option>
-        </select>
-      </div>
+        </select></div>
       <div class="field"><label>% de tu ingreso que ahorras mensualmente</label>
         <select id="fSav" onchange="chkForm()">
           <option value="">— Selecciona —</option>
           <option value="0">No ahorro</option><option value="3">Menos del 5%</option>
           <option value="7">5% – 10%</option><option value="12">10% – 15%</option>
           <option value="20">Más del 15%</option>
-        </select>
-      </div>
+        </select></div>
       <button type="button" class="btn-calc" id="btnCalc" onclick="calcular()" disabled="">Ver mi número →</button>
       <p style="font-size:.7rem;color:var(--ink-30);text-align:center;margin-top:10px;line-height:1.5">Pesos de hoy · Términos reales<br>Tus datos no se guardan en este paso</p>
     </div>
@@ -432,15 +446,12 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
       <div class="result-empty" id="resEmpty"><div class="emoji">🔢</div><p>Completa los datos para ver tu número al instante</p></div>
       <div class="result-show" id="resShow">
         <div class="eye fi" id="resEye">· Clase C</div>
-        <div class="the-number fi d1">
-          <div class="tn-glow"></div>
-          <div class="tn-inner">
-            <div class="tn-lbl">Tu Monto Objetivo (MO) · Clase C México</div>
-            <div class="tn-amt" id="tnAmt"><span>—</span></div>
-            <div class="tn-sub" id="tnSub"></div>
-            <div class="tn-breakdown" id="tnBreak"></div>
-          </div>
-        </div>
+        <div class="the-number fi d1"><div class="tn-glow"></div><div class="tn-inner">
+          <div class="tn-lbl">Tu Monto Objetivo (MO) · Clase C México</div>
+          <div class="tn-amt" id="tnAmt"><span>—</span></div>
+          <div class="tn-sub" id="tnSub"></div>
+          <div class="tn-breakdown" id="tnBreak"></div>
+        </div></div>
         <div class="prog-wrap fi d2">
           <div class="pw-head"><div class="pw-title">Avance hacia tu MO</div><div class="pw-pct low" id="pwPct">—</div></div>
           <div class="prog-track"><div class="prog-fill" id="pFill" style="width:0%"></div></div>
@@ -471,8 +482,9 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
       <div class="poss-intro">
         <div class="eye">Paso 2 · Posibilidades primero</div>
         <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:8px">Lo que hace posible<br><strong>cada nivel de riesgo</strong></div>
-        <p style="font-size:.85rem;color:var(--ink-60);line-height:1.65;margin-bottom:24px;max-width:460px">Esto no es genérico — está calculado con tus datos reales.</p>
+        <p style="font-size:.85rem;color:var(--ink-60);line-height:1.65;margin-bottom:24px;max-width:460px">Esto no es genérico — está calculado con tus datos reales. La diferencia entre conservador y agresivo puede ser el doble del esfuerzo mensual.</p>
         <div class="poss-cards" id="possCards"></div>
+        <p style="font-size:.74rem;color:var(--ink-30);font-style:italic;line-height:1.6;max-width:440px">Estas diferencias dependen de tu capacidad real de absorber pérdidas, tu horizonte y tu comportamiento histórico en crisis.</p>
         <div style="margin-top:24px"><button class="btn btn-sage" onclick="startQuiz()">Explorar mi perfil de riesgo →</button></div>
       </div>
     </div>
@@ -508,6 +520,7 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
             <div id="mc-LA" style="padding:13px 14px;background:rgba(14,15,13,.04)"><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:2px">El Navegante</div><div style="font-size:.7rem;color:var(--ink-60)">Baja tolerancia · Baja capacidad</div></div>
             <div id="mc-LH" style="padding:13px 14px;background:rgba(74,124,89,.1)"><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:2px">El Consolidador</div><div style="font-size:.7rem;color:var(--ink-60)">Baja tolerancia · Alta capacidad</div></div>
           </div>
+          <div style="display:flex;justify-content:space-between;font-family:&#39;DM Mono&#39;,monospace;font-size:.6rem;color:var(--ink-30);margin-top:5px;padding:0 4px"><span>← Baja capacidad</span><span>Alta capacidad →</span></div>
         </div>
         <div style="background:var(--ink);border-radius:13px;padding:20px 24px;margin-bottom:18px">
           <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.58rem;color:rgba(253,252,248,.32);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px">Tu tasa real asignada</div>
@@ -515,11 +528,17 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
           <div style="font-size:.78rem;color:rgba(253,252,248,.4);margin-bottom:14px" id="prRateSub"></div>
           <div id="riskAllyMsg" style="display:none;background:rgba(184,135,42,.15);border:1px solid rgba(184,135,42,.3);border-radius:8px;padding:11px 14px"><div style="font-size:.78rem;color:var(--gold-l);line-height:1.55" id="riskAllyTxt"></div></div>
         </div>
-        <div class="eye" style="margin-bottom:10px">Tu trayectoria proyectada</div>
+        <div class="eye" style="margin-bottom:10px">Tu trayectoria proyectada · con caídas históricas</div>
         <div style="background:#fff;border:1px solid var(--mist);border-radius:12px;padding:16px;margin-bottom:18px">
           <canvas id="miniAccumChart" height="187" style="display:block;width:100%" width="350"></canvas>
+          <div style="display:flex;gap:14px;margin-top:10px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--ink-60)"><div style="width:20px;height:2px;border-radius:1px;background:var(--sage)"></div>Tu perfil</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--ink-60)"><div style="width:20px;height:2px;border-radius:1px;background:rgba(14,15,13,.2)"></div>Solo Afore</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:.72rem;color:var(--ink-60)"><div style="width:20px;height:2px;border-radius:1px;border-top:2px dashed var(--ink-30)"></div>MO objetivo</div>
+          </div>
         </div>
         <button class="btn btn-gold" onclick="goScreen(&#39;s3&#39;)" style="width:100%">Tomar el control de mi vida financiera <span class="arr">→</span></button>
+        <p style="font-size:.72rem;color:var(--ink-30);text-align:center;margin-top:10px">Paso 3 · Tablero · Versión gratuita + Módulos PRO</p>
       </div>
     </div>
   </div>
@@ -533,31 +552,29 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
       <div style="background:#fff;border:1px solid var(--mist);border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(14,15,13,.06)">
         <div style="text-align:center;margin-bottom:22px">
           <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.6rem;font-weight:600;color:var(--sage)">Solvi<em style="font-style:italic;color:var(--gold)">Ret</em></div>
+          <div style="font-size:.75rem;color:var(--ink-30);margin-top:2px">Tu viaje financiero</div>
         </div>
         <div style="display:flex;background:var(--paper);border-radius:10px;padding:3px;margin-bottom:22px;gap:3px">
-          <button id="tabNew" onclick="authTab(&#39;New&#39;)" style="flex:1;padding:8px;border:none;border-radius:8px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.82rem;font-weight:600;color:var(--ink);background:#fff;cursor:pointer">Soy nuevo</button>
+          <button id="tabNew" onclick="authTab(&#39;New&#39;)" style="flex:1;padding:8px;border:none;border-radius:8px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.82rem;font-weight:600;color:var(--ink);background:#fff;box-shadow:0 1px 4px rgba(14,15,13,.08);cursor:pointer">Soy nuevo</button>
           <button id="tabRet" onclick="authTab(&#39;Ret&#39;)" style="flex:1;padding:8px;border:none;border-radius:8px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.82rem;color:var(--ink-60);background:transparent;cursor:pointer">Ya tengo cuenta</button>
         </div>
         <div id="formNew">
-          <div style="margin-bottom:14px">
-            <label style="font-size:.78rem;font-weight:600;color:var(--ink);display:block;margin-bottom:5px">Nombre o alias</label>
-            <input id="authAlias" type="text" placeholder="Tu nombre o alias" style="width:100%;padding:10px 14px;border:1.5px solid var(--mist);border-radius:10px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;color:var(--ink);outline:none;box-sizing:border-box">
-          </div>
-          <div style="margin-bottom:16px">
-            <label style="font-size:.78rem;font-weight:600;color:var(--ink);display:block;margin-bottom:5px">Correo electrónico</label>
-            <input id="authEmail" type="email" placeholder="tu@correo.com" style="width:100%;padding:10px 14px;border:1.5px solid var(--mist);border-radius:10px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;color:var(--ink);outline:none;box-sizing:border-box">
-          </div>
+          <div style="margin-bottom:14px"><label style="font-size:.78rem;font-weight:600;color:var(--ink);display:block;margin-bottom:5px">Cómo quieres que te llamemos</label><input id="authAlias" type="text" placeholder="Tu nombre o alias" style="width:100%;padding:10px 14px;border:1.5px solid var(--mist);border-radius:10px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;color:var(--ink);outline:none;box-sizing:border-box"></div>
+          <div style="margin-bottom:16px"><label style="font-size:.78rem;font-weight:600;color:var(--ink);display:block;margin-bottom:5px">Correo electrónico</label><input id="authEmail" type="email" placeholder="tu@correo.com" style="width:100%;padding:10px 14px;border:1.5px solid var(--mist);border-radius:10px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;color:var(--ink);outline:none;box-sizing:border-box"></div>
           <div id="msgNew" style="display:none;font-size:.78rem;padding:8px 12px;border-radius:8px;margin-bottom:12px"></div>
-          <button onclick="registerNew()" style="width:100%;padding:12px;background:var(--sage);color:#fff;border:none;border-radius:100px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;font-weight:600;cursor:pointer">Crear cuenta →</button>
+          <button onclick="registerNew()" style="width:100%;padding:12px;background:var(--sage);color:#fff;border:none;border-radius:100px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;font-weight:600;cursor:pointer">Crear cuenta y entrar al tablero →</button>
+          <p style="font-size:.7rem;color:var(--ink-30);text-align:center;margin-top:10px">Sin conflicto de interés. Tus datos no se venden.</p>
         </div>
         <div id="formRet" style="display:none">
-          <div style="margin-bottom:16px">
-            <label style="font-size:.78rem;font-weight:600;color:var(--ink);display:block;margin-bottom:5px">Tu correo electrónico</label>
-            <input id="authEmailRet" type="email" placeholder="tu@correo.com" style="width:100%;padding:10px 14px;border:1.5px solid var(--mist);border-radius:10px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;color:var(--ink);outline:none;box-sizing:border-box">
-          </div>
+          <div style="margin-bottom:16px"><label style="font-size:.78rem;font-weight:600;color:var(--ink);display:block;margin-bottom:5px">Tu correo electrónico</label><input id="authEmailRet" type="email" placeholder="tu@correo.com" style="width:100%;padding:10px 14px;border:1.5px solid var(--mist);border-radius:10px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;color:var(--ink);outline:none;box-sizing:border-box"></div>
           <div id="msgRet" style="display:none;font-size:.78rem;padding:8px 12px;border-radius:8px;margin-bottom:12px"></div>
-          <button onclick="loginReturning()" style="width:100%;padding:12px;background:var(--sage);color:#fff;border:none;border-radius:100px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;font-weight:600;cursor:pointer">Entrar →</button>
+          <button onclick="loginReturning()" style="width:100%;padding:12px;background:var(--sage);color:#fff;border:none;border-radius:100px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.88rem;font-weight:600;cursor:pointer">Entrar a mi tablero →</button>
+          <div style="text-align:center;margin-top:14px"><button onclick="authTab(&#39;New&#39;)" style="background:none;border:none;font-family:&#39;DM Sans&#39;,sans-serif;font-size:.76rem;color:var(--ink-30);cursor:pointer;text-decoration:underline">Registrarme como nuevo usuario</button></div>
         </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px">
+        <div style="background:#fff;border:1px solid var(--mist);border-radius:12px;padding:14px 16px"><div style="font-size:.72rem;font-weight:600;color:var(--ink)">Gratuito</div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.3rem;font-weight:700;color:var(--ink)">$0</div><div style="font-size:.7rem;color:var(--ink-60);margin-top:4px">IPR · 5D · Fiscal</div></div>
+        <div style="background:var(--ink);border-radius:12px;padding:14px 16px"><div style="font-size:.72rem;font-weight:600;color:var(--gold-l)">PRO — $299/mes</div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.3rem;font-weight:700;color:#fff">Todo</div><div style="font-size:.7rem;color:rgba(253,252,248,.4);margin-top:4px">Pareja · Deudas · Vivienda · Hijos</div></div>
       </div>
     </div>
   </div>
@@ -569,14 +586,14 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
       <div class="dl-logo">Solvi<em>Ret</em></div>
       <div class="dl-avatar"><div class="av-sm" id="dashAv"></div><div class="dav-name" id="dashName">—</div><div class="dav-arch" id="dashArch">—</div></div>
       <div class="nav-s">Principal</div>
-      <button class="nav-item" onclick="showDS(&#39;ipr&#39;)"><span class="nav-icon">📊</span>Mi IPR</button>
+      <button class="nav-item active" onclick="showDS(&#39;ipr&#39;)"><span class="nav-icon">📊</span>Mi IPR</button>
       <button class="nav-item" onclick="showDS(&#39;fiscal&#39;)"><span class="nav-icon">🟢</span>Fiscal · Art. 151</button>
-      <button class="nav-item pro-item" onclick="showDS(&#39;upgrade&#39;)"><span class="nav-icon">🏦</span>PPR</button>
-      <button class="nav-item pro-item" onclick="showDS(&#39;upgrade&#39;)"><span class="nav-icon">👫</span>Pareja</button>
-      <button class="nav-item pro-item" onclick="showDS(&#39;upgrade&#39;)"><span class="nav-icon">💳</span>Deudas</button>
-      <button class="nav-item pro-item" onclick="showDS(&#39;upgrade&#39;)"><span class="nav-icon">🏠</span>Renta vs. Compra</button>
-      <button class="nav-item pro-item" onclick="showDS(&#39;upgrade&#39;)"><span class="nav-icon">👧</span>Hijos</button>
-      <button class="nav-item pro-item" onclick="showDS(&#39;upgrade&#39;)"><span class="nav-icon">🏥</span>Salud en Retiro</button>
+      <button class="nav-item pro-item" onclick="showDS(&#39;ppr&#39;)"><span class="nav-icon">🏦</span>PPR</button>
+      <button class="nav-item pro-item" onclick="showDS(&#39;pareja&#39;)"><span class="nav-icon">👫</span>Pareja</button>
+      <button class="nav-item pro-item" onclick="showDS(&#39;deudas&#39;)"><span class="nav-icon">💳</span>Deudas</button>
+      <button class="nav-item pro-item" onclick="showDS(&#39;renta&#39;)"><span class="nav-icon">🏠</span>Renta vs. Compra</button>
+      <button class="nav-item pro-item" onclick="showDS(&#39;hijos&#39;)"><span class="nav-icon">👧</span>Hijos</button>
+      <button class="nav-item pro-item" onclick="showDS(&#39;salud&#39;)"><span class="nav-icon">🏥</span>Salud en Retiro</button>
       <button class="nav-item" onclick="showDS(&#39;5d&#39;)"><span class="nav-icon">🎯</span>Simulador 5D</button>
       <div style="height:1px;background:var(--mist);margin:8px 0"></div>
       <button class="nav-item" onclick="showDS(&#39;upgrade&#39;)" style="color:var(--gold);font-weight:600"><span class="nav-icon">⭐</span>Activar PRO</button>
@@ -587,7 +604,7 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
         <div class="ipr-hero"><div class="ipr-glow"></div><div class="ih-in">
           <div class="ih-eye">IPR · Actualizado hoy · Pesos de hoy</div>
           <div class="ih-num" id="dashIprNum"><span style="color:#e07060">—</span><span style="font-size:.4em;color:rgba(253,252,248,.35)">%</span></div>
-          <div class="ih-sub" id="dashIprSub">Completa tu perfil para ver tu IPR.</div>
+          <div class="ih-sub" id="dashIprSub">Completa tu perfil para calcular tu IPR.</div>
           <div class="ih-grid" id="dashIprGrid"></div>
         </div></div>
         <div class="upd-form">
@@ -600,25 +617,142 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
             <div class="uf"><label>Propiedad ($K)</label><input type="number" id="uProp" value="0" oninput="recalcDashIPR()"></div>
             <div class="uf"><label>Años cotizados</label><input type="number" id="uYrs" value="12" oninput="recalcDashIPR()"></div>
           </div>
-          <div style="margin-top:12px"><button class="btn btn-sage" style="padding:10px 22px;font-size:.84rem" onclick="saveIPR()">Guardar →</button></div>
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+            <button class="btn btn-sage" style="padding:10px 22px;font-size:.84rem" onclick="saveIPR()">Guardar →</button>
+            <span style="font-size:.72rem;color:var(--ink-30)">IPR se recalcula automáticamente</span>
+          </div>
+        </div>
+        <div id="dashRiskBanner" style="display:none;background:rgba(255,255,255,.06);border-radius:11px;padding:13px 16px;margin-bottom:16px;align-items:center;gap:12px;border:1px solid var(--mist)">
+          <div style="flex:1"><div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.6rem;color:var(--sage);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px">Tu perfil de riesgo</div><div style="font-size:.84rem;color:var(--ink)" id="dashRiskLabel">—</div></div>
+          <div style="text-align:right"><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.4rem;font-weight:700;color:var(--sage)" id="dashRiskRate">—</div><div style="font-size:.68rem;color:var(--ink-30)">tasa real anual</div></div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--mist);border-radius:12px;padding:18px 22px;margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <div style="font-size:.84rem;font-weight:600;color:var(--ink)">Avance hacia tu MO</div>
+            <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.3rem;font-weight:700" id="dashMoPct"><span style="color:var(--danger)">—</span></div>
+          </div>
+          <div style="height:8px;background:var(--paper-d);border-radius:100px;overflow:hidden;margin-bottom:6px">
+            <div id="dashMoFill" style="height:100%;border-radius:100px;background:var(--danger);transition:width 1s;width:0%"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-family:&#39;DM Mono&#39;,monospace;font-size:.6rem;color:var(--ink-30)"><span>$0</span><span id="dashMoMid">—</span><span>MO</span></div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--mist);border-radius:12px;padding:16px 20px;margin-bottom:16px">
+          <div style="font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:10px">Tu trayectoria · pesos de hoy</div>
+          <canvas id="dashAccumChart" height="180" style="display:block;width:100%" width="600"></canvas>
         </div>
         <div class="eye" style="margin-bottom:10px">Módulos disponibles</div>
         <div class="mod-grid" id="dashMods"></div>
+        <div id="upgradeStrip" style="background:linear-gradient(135deg,rgba(184,135,42,.1),rgba(184,135,42,.05));border:1px solid rgba(184,135,42,.3);border-radius:13px;padding:18px 22px;display:flex;align-items:center;gap:16px;margin-top:8px">
+          <div style="flex:1"><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:3px">Activa los 7 módulos PRO</div><div style="font-size:.8rem;color:var(--ink-60);line-height:1.5">Fiscal Art.151 · PPR · Pareja · Deudas · Renta vs. Compra · Hijos · Salud en retiro. 30 días gratis.</div></div>
+          <button class="btn btn-gold" style="padding:11px 22px;font-size:.84rem;flex-shrink:0" onclick="showDS(&#39;upgrade&#39;)">Ver PRO →</button>
+        </div>
       </div>
+
+      <div class="dm-sec" id="ds-5d">
+        <div class="eye">Simulador 5D · Tu experiencia de retiro</div>
+        <div style="background:var(--ink);border-radius:16px;padding:26px 30px;margin-bottom:20px;position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 20%,rgba(74,124,89,.2) 0%,transparent 55%);pointer-events:none"></div>
+          <div style="position:relative;z-index:1">
+            <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.6rem;color:rgba(253,252,248,.32);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Framework 5D · T. Rowe Price (2024) · Adaptado para México</div>
+            <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.6rem;font-weight:300;color:#fff;line-height:1.15;margin-bottom:8px">No puedes maximizar los 5 atributos<br><strong>al mismo tiempo.</strong> Cada decisión es un trade-off.</div>
+            <p style="font-size:.82rem;color:rgba(253,252,248,.5);line-height:1.6;max-width:520px;margin-bottom:16px">Mueve los controles para ver cómo cambia tu radar. Cada acción que tomes este mes tiene un impacto medible en las 5 dimensiones de tu retiro.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 14px;font-size:.76rem;color:rgba(253,252,248,.6)">📊 Longevidad</div>
+              <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 14px;font-size:.76rem;color:rgba(253,252,248,.6)">💰 Nivel de pagos</div>
+              <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 14px;font-size:.76rem;color:rgba(253,252,248,.6)">📉 Volatilidad</div>
+              <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 14px;font-size:.76rem;color:rgba(253,252,248,.6)">🔓 Liquidez</div>
+              <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 14px;font-size:.76rem;color:rgba(253,252,248,.6)">⚡ Depleción</div>
+            </div>
+          </div>
+        </div>
+        <div class="sim5d-grid">
+          <div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:22px 24px">
+            <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.62rem;color:var(--sage);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px">¿Qué harías diferente este mes?</div>
+            <div style="margin-bottom:18px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><label style="font-size:.8rem;font-weight:600;color:var(--ink)">Aportación extra mensual</label><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:.82rem;color:var(--sage-d);font-weight:500" id="v5Aport">$0</span></div>
+              <input type="range" id="sl5Aport" min="0" max="15" value="0" step="1" oninput="update5D()" style="width:100%;height:4px;-webkit-appearance:none;background:var(--mist);border-radius:100px;cursor:pointer">
+              <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--ink-30);margin-top:3px"><span>$0</span><span>$15,000/mes</span></div>
+            </div>
+            <div style="margin-bottom:18px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><label style="font-size:.8rem;font-weight:600;color:var(--ink)">Reducción de gasto mensual</label><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:.82rem;color:var(--sage-d);font-weight:500" id="v5Gasto">$0</span></div>
+              <input type="range" id="sl5Gasto" min="0" max="10" value="0" step="1" oninput="update5D()" style="width:100%;height:4px;-webkit-appearance:none;background:var(--mist);border-radius:100px;cursor:pointer">
+              <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--ink-30);margin-top:3px"><span>$0</span><span>$10,000/mes</span></div>
+            </div>
+            <div style="margin-bottom:18px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><label style="font-size:.8rem;font-weight:600;color:var(--ink)">Deuda que liquidas ($K)</label><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:.82rem;color:var(--sage-d);font-weight:500" id="v5Deuda">$0K</span></div>
+              <input type="range" id="sl5Deuda" min="0" max="500" value="0" step="10" oninput="update5D()" style="width:100%;height:4px;-webkit-appearance:none;background:var(--mist);border-radius:100px;cursor:pointer">
+              <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--ink-30);margin-top:3px"><span>$0</span><span>$500K</span></div>
+            </div>
+            <div style="margin-bottom:18px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><label style="font-size:.8rem;font-weight:600;color:var(--ink)">Aportación PPR/Afore mensual</label><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:.82rem;color:var(--sage-d);font-weight:500" id="v5PPR">$0</span></div>
+              <input type="range" id="sl5PPR" min="0" max="10" value="0" step="1" oninput="update5D()" style="width:100%;height:4px;-webkit-appearance:none;background:var(--mist);border-radius:100px;cursor:pointer">
+              <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--ink-30);margin-top:3px"><span>$0</span><span>$10,000/mes</span></div>
+            </div>
+            <div style="margin-bottom:14px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><label style="font-size:.8rem;font-weight:600;color:var(--ink)">Perfil de riesgo</label><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:.82rem;color:var(--sage-d);font-weight:500" id="v5Risk">Moderado 3.0%</span></div>
+              <input type="range" id="sl5Risk" min="0" max="2" value="1" step="1" oninput="update5D()" style="width:100%;height:4px;-webkit-appearance:none;background:var(--mist);border-radius:100px;cursor:pointer">
+              <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--ink-30);margin-top:3px"><span>Conservador 1.5%</span><span>Agresivo 4.5%</span></div>
+            </div>
+            <div style="background:var(--paper);border-radius:10px;padding:14px 16px;margin-top:4px">
+              <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.58rem;color:var(--ink-30);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Impacto de tus acciones</div>
+              <div id="impactItems"><div style="font-size:.78rem;color:var(--ink-30)">Mueve los controles para ver el impacto.</div></div>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:22px 24px">
+            <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.62rem;color:var(--sage);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px">Tu radar 5D</div>
+            <p style="font-size:.76rem;color:var(--ink-60);margin-bottom:14px;line-height:1.5">Verde = situación actual. Dorado = con tus acciones.</p>
+            <canvas id="radar5D" width="320" height="300" style="display:block;margin:0 auto"></canvas>
+            <div style="display:flex;gap:16px;justify-content:center;margin-top:12px;flex-wrap:wrap">
+              <div style="display:flex;align-items:center;gap:6px;font-size:.74rem;color:var(--ink-60)"><div style="width:16px;height:2px;background:var(--sage);border-radius:1px"></div>Situación actual</div>
+              <div style="display:flex;align-items:center;gap:6px;font-size:.74rem;color:var(--ink-60)"><div style="width:16px;height:2px;background:var(--gold);border-radius:1px"></div>Con tus acciones</div>
+              <div style="display:flex;align-items:center;gap:6px;font-size:.74rem;color:var(--ink-60)"><div style="width:16px;height:2px;background:rgba(14,15,13,.15);border-radius:1px"></div>Promedio cohorte</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:22px 24px;margin-bottom:16px">
+          <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:4px">Tu IPR según perfil de riesgo · Pesos de hoy</div>
+          <p style="font-size:.8rem;color:var(--ink-60);margin-bottom:16px;line-height:1.5">La diferencia entre conservador y agresivo puede ser la diferencia entre alcanzar o no tu MO.</p>
+          <div style="overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse;font-size:.82rem" id="iprTable">
+              <thead><tr style="border-bottom:1.5px solid var(--mist)">
+                <th style="text-align:left;padding:8px 12px;font-weight:600;color:var(--ink-60);font-size:.72rem;font-family:&#39;DM Mono&#39;,monospace;letter-spacing:1px;text-transform:uppercase">Acción</th>
+                <th style="text-align:center;padding:8px 12px;color:var(--sage-d);font-size:.72rem;font-family:&#39;DM Mono&#39;,monospace">Cons. 1.5%</th>
+                <th style="text-align:center;padding:8px 12px;color:var(--gold);font-size:.72rem;font-family:&#39;DM Mono&#39;,monospace">Mod. 3.0%</th>
+                <th style="text-align:center;padding:8px 12px;color:var(--danger);font-size:.72rem;font-family:&#39;DM Mono&#39;,monospace">Agr. 4.5%</th>
+                <th style="text-align:right;padding:8px 12px;color:var(--ink-60);font-size:.72rem;font-family:&#39;DM Mono&#39;,monospace">Diferencia max</th>
+              </tr></thead>
+              <tbody id="iprTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,rgba(74,124,89,.08),rgba(184,135,42,.06));border:1px solid var(--sage-xl);border-radius:14px;padding:22px 26px;display:flex;gap:18px;align-items:flex-start">
+          <div style="font-size:1.6rem;flex-shrink:0">📅</div>
+          <div style="flex:1">
+            <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:5px">Tu práctica del mes</div>
+            <div style="font-size:.84rem;color:var(--ink);line-height:1.6;margin-bottom:12px" id="monthlyPractice">Mueve los controles para definir tu compromiso del mes.</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button class="btn btn-sage" style="padding:10px 20px;font-size:.84rem" onclick="saveMonthlyDecision()">Comprometerse este mes →</button>
+              <button onclick="showDS(&#39;ipr&#39;)" style="background:none;border:1.5px solid var(--mist);border-radius:100px;padding:10px 18px;font-size:.84rem;color:var(--ink-60);cursor:pointer;font-family:&#39;DM Sans&#39;,sans-serif">Actualizar mi IPR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="dm-sec" id="ds-fiscal">
         <div class="eye">Módulo Fiscal · Art. 151 LISR</div>
         <div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:24px 28px">
           <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.35rem;font-weight:600;color:var(--ink);margin-bottom:6px">¿Cuánto te regresa el SAT si aportas al PPR o Afore?</div>
+          <p style="font-size:.83rem;color:var(--ink-60);line-height:1.6;margin-bottom:20px;max-width:500px">El Art. 151 permite deducir aportaciones voluntarias hasta el menor de: 10% de tu ingreso acumulable anual, o 5 UMAs (~$176,000 en 2025).</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
             <div class="field"><label>Ingreso mensual neto</label>
               <select id="fInc2" onchange="calcFiscal2()">
                 <option value="20">$15K – $25K</option><option value="30" selected="">$25K – $35K</option>
                 <option value="45">$35K – $55K</option><option value="65">$55K – $75K</option>
-                <option value="90">$75K – $110K</option>
-              </select>
-            </div>
+                <option value="90">$75K – $110K</option><option value="0">Ingresar número exacto</option>
+              </select></div>
             <div class="field"><label>Aportación mensual al PPR/Afore</label><input type="number" id="fAport2" value="3000" oninput="calcFiscal2()"></div>
           </div>
+          <div id="fExact2" style="display:none;margin-bottom:14px"><div class="field"><label>Tu ingreso mensual exacto ($)</label><input type="number" id="fIncNum2" placeholder="Ej: 42000" oninput="calcFiscal2()"></div></div>
           <div style="background:var(--ink);border-radius:12px;padding:20px 24px;margin-bottom:14px" id="fiscalRes2">
             <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.58rem;color:rgba(253,252,248,.3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px">Tu ahorro fiscal anual · Art. 151</div>
             <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:2rem;font-weight:700;color:#fff;margin-bottom:4px" id="fiscalAmt2">—</div>
@@ -626,43 +760,55 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
             <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px" id="fiscalGrid2"></div>
           </div>
           <div class="insight" id="fiscalIns2"><div class="ins-i">💡</div><div class="ins-t" id="fiscalInsTxt2"></div></div>
-        </div>
-      </div>
-      <div class="dm-sec" id="ds-5d">
-        <div class="eye">Simulador 5D · Tu experiencia de retiro</div>
-        <div class="sim5d-grid">
-          <div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:22px 24px">
-            <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.62rem;color:var(--sage);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px">¿Qué harías diferente este mes?</div>
-            <div style="margin-bottom:18px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:6px"><label style="font-size:.8rem;font-weight:600;color:var(--ink)">Aportación extra mensual</label><span id="v5Aport" style="font-family:&#39;DM Mono&#39;,monospace;font-size:.82rem;color:var(--sage-d)">$0</span></div>
-              <input type="range" id="sl5Aport" min="0" max="15" value="0" step="1" oninput="update5D()" style="width:100%;height:4px;-webkit-appearance:none;background:var(--mist);border-radius:100px;cursor:pointer">
-            </div>
-            <div style="margin-bottom:18px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:6px"><label style="font-size:.8rem;font-weight:600;color:var(--ink)">Reducción de gasto mensual</label><span id="v5Gasto" style="font-family:&#39;DM Mono&#39;,monospace;font-size:.82rem;color:var(--sage-d)">$0</span></div>
-              <input type="range" id="sl5Gasto" min="0" max="10" value="0" step="1" oninput="update5D()" style="width:100%;height:4px;-webkit-appearance:none;background:var(--mist);border-radius:100px;cursor:pointer">
-            </div>
-            <div style="margin-bottom:18px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:6px"><label style="font-size:.8rem;font-weight:600;color:var(--ink)">Perfil de riesgo</label><span id="v5Risk" style="font-family:&#39;DM Mono&#39;,monospace;font-size:.82rem;color:var(--sage-d)">Moderado 3.0%</span></div>
-              <input type="range" id="sl5Risk" min="0" max="2" value="1" step="1" oninput="update5D()" style="width:100%;height:4px;-webkit-appearance:none;background:var(--mist);border-radius:100px;cursor:pointer">
-              <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--ink-30);margin-top:3px"><span>Conservador 1.5%</span><span>Agresivo 4.5%</span></div>
-            </div>
-            <div id="v5Deuda" style="display:none"></div>
-            <div id="v5PPR" style="display:none"></div>
-            <input type="hidden" id="sl5Deuda" value="0">
-            <input type="hidden" id="sl5PPR" value="0">
-          </div>
-          <div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:22px 24px">
-            <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:.62rem;color:var(--sage);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px">Tu radar 5D</div>
-            <canvas id="radar5D" width="320" height="300" style="display:block;margin:0 auto"></canvas>
+          <div class="eye" style="margin-top:20px;margin-bottom:10px">Semáforo de productos · Eficiencia fiscal</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:9px;background:rgba(74,124,89,.06);border:1px solid rgba(74,124,89,.25)"><div style="width:10px;height:10px;border-radius:50%;background:var(--sage);flex-shrink:0"></div><div style="flex:1"><div style="font-size:.85rem;font-weight:500;color:var(--ink)">Afore voluntaria + PPR</div><div style="font-size:.74rem;color:var(--ink-60)">Deducible hoy · Sin ISR anual · Máxima eficiencia</div></div><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:.58rem;background:rgba(74,124,89,.15);color:var(--sage-d);padding:2px 8px;border-radius:100px">VERDE</span></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:9px;background:rgba(184,135,42,.06);border:1px solid rgba(184,135,42,.25)"><div style="width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0"></div><div style="flex:1"><div style="font-size:.85rem;font-weight:500;color:var(--ink)">CETES Directo · ETFs largo plazo</div><div style="font-size:.74rem;color:var(--ink-60)">ISR diferido — se paga al retirar, no anualmente</div></div><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:.58rem;background:rgba(184,135,42,.12);color:var(--gold);padding:2px 8px;border-radius:100px">AMARILLO</span></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:9px;background:rgba(166,48,32,.05);border:1px solid rgba(166,48,32,.2)"><div style="width:10px;height:10px;border-radius:50%;background:var(--danger);flex-shrink:0"></div><div style="flex:1"><div style="font-size:.85rem;font-weight:500;color:var(--ink)">Cuentas bancarias · Pagarés</div><div style="font-size:.74rem;color:var(--ink-60)">ISR anual sobre intereses · Erosiona el rendimiento real año a año</div></div><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:.58rem;background:rgba(166,48,32,.1);color:var(--danger);padding:2px 8px;border-radius:100px">ROJO</span></div>
           </div>
         </div>
       </div>
+
+      <div class="dm-sec" id="ds-ppr"><div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:32px;text-align:center"><div style="font-size:2rem;margin-bottom:14px">🏦</div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.4rem;font-weight:600;color:var(--ink);margin-bottom:8px">Módulo PPR · Plan Personal de Retiro</div><p style="font-size:.86rem;color:var(--ink-60);margin-bottom:20px;max-width:360px;margin:0 auto 20px">Simula el vehículo de acumulación más eficiente para clase C en México: deducible hoy + sin ISR anual + tax alpha.</p><button class="btn btn-gold" onclick="doRegister(&#39;pro&#39;)">Activar PRO para acceder →</button></div></div>
+      <div class="dm-sec" id="ds-pareja"><div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:32px;text-align:center"><div style="font-size:2rem;margin-bottom:14px">👫</div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.4rem;font-weight:600;color:var(--ink);margin-bottom:8px">Módulo Pareja · IPR Combinado</div><p style="font-size:.86rem;color:var(--ink-60);margin-bottom:20px;max-width:360px;margin:0 auto 20px">Tu posición financiera como equipo: IPR individual de cada cónyuge + IPR combinado del núcleo familiar.</p><button class="btn btn-gold" onclick="doRegister(&#39;pro&#39;)">Activar PRO para acceder →</button></div></div>
+      <div class="dm-sec" id="ds-deudas"><div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:32px;text-align:center"><div style="font-size:2rem;margin-bottom:14px">💳</div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.4rem;font-weight:600;color:var(--ink);margin-bottom:8px">Módulo Deudas · Impacto en IPR</div><p style="font-size:.86rem;color:var(--ink-60);margin-bottom:20px;max-width:360px;margin:0 auto 20px">Liquidar una tarjeta al 50% anual es equivalente a un rendimiento garantizado del 50%. Estrategia avalancha.</p><button class="btn btn-gold" onclick="doRegister(&#39;pro&#39;)">Activar PRO para acceder →</button></div></div>
+      <div class="dm-sec" id="ds-renta"><div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:32px;text-align:center"><div style="font-size:2rem;margin-bottom:14px">🏠</div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.4rem;font-weight:600;color:var(--ink);margin-bottom:8px">Módulo Renta vs. Compra</div><p style="font-size:.86rem;color:var(--ink-60);margin-bottom:20px;max-width:360px;margin:0 auto 20px">La decisión patrimonial más grande: plusvalía, costo de oportunidad del enganche, tasa real. En números.</p><button class="btn btn-gold" onclick="doRegister(&#39;pro&#39;)">Activar PRO para acceder →</button></div></div>
+      <div class="dm-sec" id="ds-hijos"><div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:32px;text-align:center"><div style="font-size:2rem;margin-bottom:14px">👧</div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.4rem;font-weight:600;color:var(--ink);margin-bottom:8px">Módulo Hijos · MO Educativo</div><p style="font-size:.86rem;color:var(--ink-60);margin-bottom:20px;max-width:360px;margin:0 auto 20px">Cuánto necesitas apartar mensualmente por hijo según edad, tipo de universidad y tasa real.</p><button class="btn btn-gold" onclick="doRegister(&#39;pro&#39;)">Activar PRO para acceder →</button></div></div>
+      <div class="dm-sec" id="ds-salud"><div style="background:#fff;border:1px solid var(--mist);border-radius:14px;padding:32px;text-align:center"><div style="font-size:2rem;margin-bottom:14px">🏥</div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.4rem;font-weight:600;color:var(--ink);margin-bottom:8px">Módulo Salud en Retiro</div><p style="font-size:.86rem;color:var(--ink-60);margin-bottom:20px;max-width:360px;margin:0 auto 20px">El gasto que nadie presupuesta: $8K–$25K/mes adicionales en retiro. MO adicional necesario. SGMM vitalicio.</p><button class="btn btn-gold" onclick="doRegister(&#39;pro&#39;)">Activar PRO para acceder →</button></div></div>
+
       <div class="dm-sec" id="ds-upgrade">
-        <div style="max-width:600px;margin:0 auto;padding:20px 0;text-align:center">
-          <div style="font-size:2rem;margin-bottom:16px">⭐</div>
-          <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.8rem;font-weight:300;color:var(--ink);margin-bottom:8px">Próximamente</div>
-          <p style="font-size:.88rem;color:var(--ink-60);margin-bottom:24px">Este módulo PRO estará disponible pronto.</p>
-          <button class="btn btn-gold" onclick="alert(&#39;Próximamente — lista de espera beta&#39;)">Unirse a la lista de espera →</button>
+        <div style="max-width:600px;margin:0 auto;padding:20px 0">
+          <div class="eye" style="margin-bottom:12px">Activar versión PRO</div>
+          <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.8rem;font-weight:300;line-height:1.15;color:var(--ink);margin-bottom:8px">Tu tablero financiero<br><strong>completamente desbloqueado</strong></div>
+          <p style="font-size:.88rem;color:var(--ink-60);line-height:1.65;margin-bottom:28px;max-width:460px">Todos los módulos. Sin límites. Sin conflicto de interés — nunca recibimos comisión por ningún producto que recomendamos.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">
+            <div style="background:#fff;border:1.5px solid var(--mist);border-radius:14px;padding:22px">
+              <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:3px">Gratuito</div>
+              <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:12px">$0 <span style="font-size:.9rem;color:var(--ink-60);font-family:&#39;DM Sans&#39;,sans-serif;font-weight:400">/mes</span></div>
+              <div style="display:flex;flex-direction:column;gap:7px;font-size:.82rem;color:var(--ink)">
+                <div>✓ IPR actualizable mensualmente</div><div>✓ Historial de IPR</div><div>✓ Nudges personalizados</div><div>✓ Módulo Fiscal Art. 151</div>
+                <div style="color:var(--ink-30)">🔒 PPR · Pareja · Deudas</div><div style="color:var(--ink-30)">🔒 Renta · Hijos · Salud</div>
+              </div>
+            </div>
+            <div style="background:rgba(184,135,42,.04);border:1.5px solid var(--gold);border-radius:14px;padding:22px;position:relative">
+              <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-family:&#39;DM Mono&#39;,monospace;font-size:.58rem;padding:2px 12px;border-radius:100px;letter-spacing:1px;white-space:nowrap">MÁS COMPLETO</div>
+              <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:3px">PRO</div>
+              <div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:2rem;font-weight:700;color:var(--ink);margin-bottom:12px">$299 <span style="font-size:.9rem;color:var(--ink-60);font-family:&#39;DM Sans&#39;,sans-serif;font-weight:400">/mes</span></div>
+              <div style="display:flex;flex-direction:column;gap:7px;font-size:.82rem;color:var(--ink)">
+                <div>✓ Todo lo gratuito</div>
+                <div style="color:var(--sage-d);font-weight:500">✓ Fiscal Art. 151 + semáforo</div>
+                <div style="color:var(--sage-d);font-weight:500">✓ PPR · Tax alpha</div>
+                <div style="color:var(--sage-d);font-weight:500">✓ Pareja · IPR combinado</div>
+                <div style="color:var(--sage-d);font-weight:500">✓ Deudas · Renta vs. Compra</div>
+                <div style="color:var(--sage-d);font-weight:500">✓ Hijos / Educación · Salud</div>
+              </div>
+              <button class="btn btn-gold" style="width:100%;margin-top:16px;padding:12px" onclick="alert(&#39;Próximamente — lista de espera beta&#39;)">Comenzar PRO — 30 días gratis →</button>
+            </div>
+          </div>
+          <div style="background:var(--ink);border-radius:12px;padding:18px 22px;display:flex;gap:14px;align-items:flex-start">
+            <div style="font-size:1.5rem;flex-shrink:0">🛡️</div>
+            <div><div style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1rem;font-weight:600;color:#fff;margin-bottom:4px">Garantía fiduciaria</div><div style="font-size:.78rem;color:rgba(253,252,248,.5);line-height:1.6">Si en 30 días no sientes mayor claridad sobre tu situación financiera, te devolvemos tu dinero. SolviRet nunca recibe comisiones por productos.</div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -671,7 +817,14 @@ body{font-family:'DM Sans','Segoe UI',Arial,sans-serif;background:var(--paper);c
         <div class="dr-title">Nudge del mes</div>
         <div class="nudge-c"><div style="font-size:1rem;margin-bottom:5px">💡</div><div style="font-size:.8rem;color:var(--ink);line-height:1.55" id="dashNudge">Completa tu perfil para ver recomendaciones personalizadas.</div></div>
       </div>
-      <div><div class="dr-title">Tu historial de IPR</div><div id="dashTimeline"></div></div>
+      <div style="margin-bottom:24px">
+        <div class="dr-title">Tu historial de IPR</div>
+        <div id="dashTimeline"></div>
+      </div>
+      <div>
+        <div class="dr-title">Próximas prácticas</div>
+        <div id="dashPracs"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -685,37 +838,38 @@ const SHEETS_URL='https://script.google.com/macros/s/AKfycbyk6_Q5AisGoi2ntMddmW7
 function authTab(tab){
   ['New','Ret'].forEach(t=>{
     const btn=document.getElementById('tab'+t),frm=document.getElementById('form'+t);
-    const active=(t===tab)||(tab==='New'&&t==='New')||(tab==='Ret'&&t==='Ret');
+    const active=t===tab;
     btn.style.fontWeight=active?'600':'400';btn.style.background=active?'#fff':'transparent';
-    btn.style.color=active?'var(--ink)':'var(--ink-60)';
+    btn.style.color=active?'var(--ink)':'var(--ink-60)';btn.style.boxShadow=active?'0 1px 4px rgba(14,15,13,.08)':'none';
     frm.style.display=active?'block':'none';
   });
 }
-function authMsg(id,msg,ok){
-  const el=document.getElementById(id);el.style.display='block';
-  el.style.background=ok?'rgba(74,124,89,.1)':'rgba(166,48,32,.08)';
-  el.style.color=ok?'var(--sage-d)':'var(--danger)';el.textContent=msg;
-}
+function authMsg(id,msg,ok){const el=document.getElementById(id);el.style.display='block';el.style.background=ok?'rgba(74,124,89,.1)':'rgba(166,48,32,.08)';el.style.color=ok?'var(--sage-d)':'var(--danger)';el.style.border=ok?'1px solid rgba(74,124,89,.2)':'1px solid rgba(166,48,32,.15)';el.textContent=msg;}
 function registerNew(){
   const alias=(document.getElementById('authAlias').value||'').trim();
   const email=(document.getElementById('authEmail').value||'').trim().toLowerCase();
   if(!alias){authMsg('msgNew','¿Cómo quieres que te llamemos?',false);return;}
   if(!email||!email.includes('@')){authMsg('msgNew','Escribe un correo válido.',false);return;}
   S.alias=alias;S.email=email;S.loggedIn=true;
-  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({alias,email,edad:S.age||'',genero:S.gender||''})}).catch(()=>{});
+  const payload={alias,email,edad:S.age||'',genero:S.gender||'',ingreso:S.inc?'$'+(S.inc*1000).toLocaleString('es-MX')+'/mes':'',perfilRiesgo:S.riskLabel||'',arquetipo:S.archetype?S.archetype.name||'':''};
+  fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(()=>{});
   authMsg('msgNew','¡Bienvenido, '+alias+'! Entrando...',true);
   setTimeout(enterDash,700);
 }
 function loginReturning(){
   const email=(document.getElementById('authEmailRet').value||'').trim().toLowerCase();
   if(!email||!email.includes('@')){authMsg('msgRet','Escribe tu correo.',false);return;}
-  S.alias=email.split('@')[0];S.email=email;S.loggedIn=true;
-  authMsg('msgRet','Entrando...',true);setTimeout(enterDash,700);
+  authMsg('msgRet','Buscando tu perfil...',true);
+  fetch(SHEETS_URL+'?email='+encodeURIComponent(email))
+    .then(r=>r.json()).then(data=>{
+      if(data&&data.found){S.alias=data.alias||email.split('@')[0];S.email=email;S.loggedIn=true;authMsg('msgRet','¡Bienvenido de vuelta, '+S.alias+'!',true);setTimeout(enterDash,700);}
+      else{authMsg('msgRet','No encontramos ese correo. ¿Eres nuevo?',false);}
+    }).catch(()=>{S.alias=email.split('@')[0];S.email=email;S.loggedIn=true;authMsg('msgRet','Entrando...',true);setTimeout(enterDash,700);});
 }
 function cerrarSesion(){
   if(!confirm('¿Cerrar sesión?'))return;
   S={...DEFAULT_S};
-  document.getElementById('dashSection').classList.remove('active');document.getElementById('dashSection').style.display='none';
+  const dash=document.getElementById('dashSection');dash.classList.remove('active');dash.style.display='none';
   document.getElementById('convSection').style.display='none';document.getElementById('btnCerrar').style.display='none';
   goScreen('s0');
 }
@@ -726,7 +880,7 @@ function updateJBar(active){
     const el=document.getElementById('jStep'+i),conn=document.getElementById('jcon'+(i)+(i+1));
     if(!el)return;
     el.classList.toggle('active',i===ai);
-    el.classList.toggle('done',i<ai);
+    el.classList.toggle('done',i<ai||(i===0&&S.calcDone)||(i===1&&S.calcDone&&ai>1)||(i===2&&S.profileDone&&ai>2));
     if(conn)conn.classList.toggle('done',i<ai);
   });
   document.getElementById('jbCtaBtn').classList.toggle('show',S.calcDone&&ai>=2);
@@ -740,8 +894,7 @@ function goScreen(id){
   if(id==='s1')resetS1();
   if(id==='s2'){resetS2();initS2();}
   if(id==='s3'){initS3();showConv();}
-  const proBtn=document.getElementById('jbCtaBtn');
-  if(proBtn)proBtn.style.display=S.calcDone?'block':'none';
+  const proBtn=document.getElementById('jbCtaBtn');if(proBtn)proBtn.style.display=S.calcDone?'block':'none';
 }
 
 let chartAge=null;
@@ -750,11 +903,7 @@ function selAge0(age,el){
   el.classList.add('active');chartAge=age;drawUrgChart(age);
   const yrs=Math.max(65-age,1),rm=Math.pow(1+ACUM,1/12)-1;
   const needed=Math.round(MO_C/((Math.pow(1+rm,yrs*12)-1)/rm));
-  document.getElementById('legend0').innerHTML=`
-    <div class="cld-item"><div class="cld-line" style="background:#4A7C59"></div>Empieza a los 25 — $4,200/mes</div>
-    <div class="cld-item"><div class="cld-line" style="background:#B8872A"></div>Empieza a los 40 — $14,800/mes</div>
-    <div class="cld-item"><div class="cld-line" style="background:#A63020"></div>Empieza a los 50 — $38,000/mes</div>
-    <div class="cld-item"><div class="cld-line" style="background:#DDB96A"></div><strong>Tú (${age} años): $${(needed/1000).toFixed(0)}K/mes</strong></div>`;
+  document.getElementById('legend0').innerHTML=`<div class="cld-item"><div class="cld-line" style="background:#4A7C59"></div>Empieza a los 25 — $4,200/mes</div><div class="cld-item"><div class="cld-line" style="background:#B8872A"></div>Empieza a los 40 — $14,800/mes</div><div class="cld-item"><div class="cld-line" style="background:#A63020"></div>Empieza a los 50 — $38,000/mes</div><div class="cld-item"><div class="cld-line" style="background:#DDB96A"></div><strong>Tú (${age} años): $${(needed/1000).toFixed(0)}K/mes${age>=55?' — muy difícil sin haber empezado antes':''}</strong></div>`;
 }
 function drawUrgChart(hlAge){
   const canvas=document.getElementById('urgChart');if(!canvas)return;
@@ -767,39 +916,27 @@ function drawUrgChart(hlAge){
   function xP(a){return pl+(a-25)/(60-25)*cW;}
   function yP(v){return pt+cH-Math.min(v/maxV,1)*cH;}
   ctx.clearRect(0,0,W,H);
-  [10000,20000,30000,40000,50000].filter(v=>v<maxV).forEach(v=>{
-    ctx.strokeStyle='rgba(255,255,255,.06)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pl,yP(v));ctx.lineTo(W-pr,yP(v));ctx.stroke();
-    ctx.fillStyle='rgba(255,255,255,.22)';ctx.font='500 8px DM Mono,monospace';ctx.textAlign='right';ctx.fillText('$'+(v/1000)+'K',pl-4,yP(v)+3);
-  });
+  [10000,20000,30000,40000,50000].filter(v=>v<maxV).forEach(v=>{ctx.strokeStyle='rgba(255,255,255,.06)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pl,yP(v));ctx.lineTo(W-pr,yP(v));ctx.stroke();ctx.fillStyle='rgba(255,255,255,.22)';ctx.font='500 8px DM Mono,monospace';ctx.textAlign='right';ctx.fillText('$'+(v/1000)+'K',pl-4,yP(v)+3);});
   ctx.fillStyle='rgba(255,255,255,.22)';ctx.font='500 8px DM Mono,monospace';ctx.textAlign='center';
   [25,30,35,40,45,50,55,60].forEach(a=>ctx.fillText(a,xP(a),H-pb+14));
-  const grad=ctx.createLinearGradient(pl,0,W-pr,0);
-  grad.addColorStop(0,'rgba(74,124,89,.12)');grad.addColorStop(.6,'rgba(184,135,42,.1)');grad.addColorStop(1,'rgba(166,48,32,.1)');
-  ctx.beginPath();ctx.moveTo(xP(ages[0]),yP(vals[0]));
-  ages.forEach((a,i)=>{if(!i)return;const x0=xP(ages[i-1]),y0=yP(vals[i-1]),x1=xP(a),y1=yP(vals[i]),cx=(x0+x1)/2;ctx.bezierCurveTo(cx,y0,cx,y1,x1,y1);});
-  ctx.lineTo(xP(ages[ages.length-1]),pt+cH);ctx.lineTo(xP(ages[0]),pt+cH);ctx.closePath();ctx.fillStyle=grad;ctx.fill();
-  const lg=ctx.createLinearGradient(pl,0,W-pr,0);
-  lg.addColorStop(0,'#4A7C59');lg.addColorStop(.55,'#B8872A');lg.addColorStop(1,'#A63020');
-  ctx.beginPath();ctx.moveTo(xP(ages[0]),yP(vals[0]));
-  ages.forEach((a,i)=>{if(!i)return;const x0=xP(ages[i-1]),y0=yP(vals[i-1]),x1=xP(a),y1=yP(vals[i]),cx=(x0+x1)/2;ctx.bezierCurveTo(cx,y0,cx,y1,x1,y1);});
-  ctx.strokeStyle=lg;ctx.lineWidth=2.5;ctx.stroke();
-  if(hlAge){const mx=xP(hlAge),my=yP(mthNeed(hlAge));ctx.beginPath();ctx.arc(mx,my,7,0,Math.PI*2);ctx.fillStyle='#DDB96A';ctx.fill();}
+  ctx.fillStyle='rgba(166,48,32,.1)';ctx.fillRect(xP(50),pt,xP(60)-xP(50),cH);
+  const grad=ctx.createLinearGradient(pl,0,W-pr,0);grad.addColorStop(0,'rgba(74,124,89,.12)');grad.addColorStop(.6,'rgba(184,135,42,.1)');grad.addColorStop(1,'rgba(166,48,32,.1)');
+  ctx.beginPath();ctx.moveTo(xP(ages[0]),yP(vals[0]));ages.forEach((a,i)=>{if(!i)return;const x0=xP(ages[i-1]),y0=yP(vals[i-1]),x1=xP(a),y1=yP(vals[i]),cx=(x0+x1)/2;ctx.bezierCurveTo(cx,y0,cx,y1,x1,y1);});ctx.lineTo(xP(ages[ages.length-1]),pt+cH);ctx.lineTo(xP(ages[0]),pt+cH);ctx.closePath();ctx.fillStyle=grad;ctx.fill();
+  const lg=ctx.createLinearGradient(pl,0,W-pr,0);lg.addColorStop(0,'#4A7C59');lg.addColorStop(.55,'#B8872A');lg.addColorStop(1,'#A63020');
+  ctx.beginPath();ctx.moveTo(xP(ages[0]),yP(vals[0]));ages.forEach((a,i)=>{if(!i)return;const x0=xP(ages[i-1]),y0=yP(vals[i-1]),x1=xP(a),y1=yP(vals[i]),cx=(x0+x1)/2;ctx.bezierCurveTo(cx,y0,cx,y1,x1,y1);});ctx.strokeStyle=lg;ctx.lineWidth=2.5;ctx.stroke();
+  if(hlAge){const mx=xP(hlAge),my=yP(mthNeed(hlAge));ctx.beginPath();ctx.arc(mx,my,7,0,Math.PI*2);ctx.fillStyle='#DDB96A';ctx.fill();ctx.strokeStyle='#0E0F0D';ctx.lineWidth=2;ctx.stroke();ctx.fillStyle='#DDB96A';ctx.font='600 9px DM Mono,monospace';ctx.textAlign='center';ctx.fillText(hlAge,mx,my-13);}
   ctx.strokeStyle='rgba(255,255,255,.1)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pl,pt+cH);ctx.lineTo(W-pr,pt+cH);ctx.stroke();
 }
-window.addEventListener('load',()=>setTimeout(()=>{drawUrgChart(null);},100));
 window.addEventListener('resize',()=>drawUrgChart(chartAge));
 
 let formGender='M';
 function selG(g,el){document.querySelectorAll('.g-chip').forEach(c=>c.classList.remove('sel'));el.classList.add('sel');formGender=g;chkForm();}
 function resetS1(){
-  const flds=['fAlias','fAge','fInc','fYrs','fSav'];
-  flds.forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
-  document.querySelectorAll('.g-chip').forEach((c,i)=>c.classList.toggle('sel',i===0));
-  formGender='M';
+  ['fAlias','fAge','fInc','fYrs','fSav'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  document.querySelectorAll('.g-chip').forEach((c,i)=>c.classList.toggle('sel',i===0));formGender='M';
   const resE=document.getElementById('resEmpty');if(resE)resE.style.display='';
   const resS=document.getElementById('resShow');if(resS)resS.classList.remove('active');
-  const btn=document.getElementById('btnCalc');
-  if(btn){btn.classList.remove('on');btn.disabled=true;btn.style.opacity='.4';btn.style.cursor='not-allowed';}
+  const btn=document.getElementById('btnCalc');if(btn){btn.classList.remove('on');btn.disabled=true;btn.style.opacity='.4';btn.style.cursor='not-allowed';}
 }
 function chkForm(){
   S.alias=(document.getElementById('fAlias')||{}).value?.trim()||'';
@@ -832,53 +969,52 @@ function calcular(){
   const gen=S.age<=29?'GenZ':S.age<=43?'Millennial':S.age<=58?'GenX':'Boomer';
   S.generation=gen;S.calcDone=true;saveS();
   document.getElementById('jbCtaBtn').classList.add('show');
-  const resE=document.getElementById('resEmpty');resE.style.display='none';
-  const resS=document.getElementById('resShow');resS.classList.add('active');
+  document.getElementById('resEmpty').style.display='none';document.getElementById('resShow').classList.add('active');
   const cta=document.getElementById('cta12');if(cta)cta.style.display='';
   const genTxt={GenZ:'Generación Z',Millennial:'Millennial',GenX:'Generación X',Boomer:'Baby Boomer'}[gen];
   document.getElementById('resEye').textContent=`${S.alias} · ${genTxt} · Clase C`;
   document.getElementById('tnAmt').innerHTML=`<span>${fmtM(MO_br>0?MO_br:MO_C)}</span>`;
-  document.getElementById('tnSub').textContent=brecha>0?`Para pagar ${fmtP(brecha)}/mes durante 20 años. Pesos de hoy.`:`¡Tu pensión estimada cubre la meta de $50,000/mes!`;
+  document.getElementById('tnSub').textContent=brecha>0?`Para pagar ${fmtP(brecha)}/mes durante 20 años (brecha entre pensión y $50K). Pesos de hoy.`:`¡Tu pensión estimada cubre la meta de $50,000/mes!`;
   document.getElementById('tnBreak').innerHTML=`<div class="tn-item"><div class="tni-l">Pensión total/mes</div><div class="tni-v warn">${fmtP(penTot)}</div></div><div class="tn-item"><div class="tni-l">Brecha mensual</div><div class="tni-v ${brecha>0?'neg':'pos'}">${brecha>0?fmtP(brecha):'$0 ✓'}</div></div><div class="tn-item"><div class="tni-l">Tu proyección</div><div class="tni-v ${patriProy>=MO_br?'pos':'neg'}">${fmtM(patriProy)}</div></div>`;
   const pPct=document.getElementById('pwPct');pPct.textContent=avance+'%';pPct.className='pw-pct '+(avance>=80?'ok':avance>=40?'mid':'low');
   const col=avance>=80?'var(--sage)':avance>=40?'var(--warn)':'var(--danger)';
   setTimeout(()=>{const pf=document.getElementById('pFill');pf.style.width=Math.min(avance,100)+'%';pf.style.background=`linear-gradient(90deg,${col}88,${col})`;},80);
   document.getElementById('pMid').textContent=fmtM(MO_br*.5);document.getElementById('pEnd').textContent=fmtM(MO_br||MO_C);
-  document.getElementById('penGrid').innerHTML=`<div class="pc ${penIMSS<15000?'alert':''}"><div class="pc-l">Pensión IMSS estimada</div><div class="pc-v ${penIMSS<15000?'neg':'pos'}">${fmtP(penIMSS)}/mes</div><div class="pc-ctx">Ley 97 · ${S.yrs} años cotizados · Tasa de reemplazo ~${Math.round(tr*100)}%</div></div><div class="pc ok"><div class="pc-l">Pensión Bienestar</div><div class="pc-v pos">${fmtP(BIENE)}/mes</div><div class="pc-ctx">$6,200 bimestral · Para todas las personas ≥65 años</div></div><div class="pc ${brecha>5000?'alert':''}"><div class="pc-l">Tasa de reemplazo total</div><div class="pc-v ${Math.round(penTot/inc*100)<50?'neg':''}">${Math.round(penTot/inc*100)}%</div><div class="pc-ctx">Meta recomendada: 70%+</div></div><div class="pc ${brecha>0?'alert':'ok'}"><div class="pc-l">Meta $50K/mes</div><div class="pc-v ${brecha>0?'neg':'pos'}">${brecha>0?'−'+fmtP(brecha):'¡Cubierta!'}</div></div>`;
+  document.getElementById('penGrid').innerHTML=`<div class="pc ${penIMSS<15000?'alert':''}"><div class="pc-l">Pensión IMSS estimada</div><div class="pc-v ${penIMSS<15000?'neg':'pos'}">${fmtP(penIMSS)}/mes</div><div class="pc-ctx">Ley 97 · ${S.yrs} años cotizados · Tasa de reemplazo ~${Math.round(tr*100)}%</div></div><div class="pc ok"><div class="pc-l">Pensión Bienestar</div><div class="pc-v pos">${fmtP(BIENE)}/mes</div><div class="pc-ctx">$6,200 bimestral · Para todas las personas ≥65 años</div></div><div class="pc ${brecha>5000?'alert':''}"><div class="pc-l">Tasa de reemplazo total</div><div class="pc-v ${Math.round(penTot/inc*100)<50?'neg':''}">${Math.round(penTot/inc*100)}%</div><div class="pc-ctx">de tu ingreso actual · Meta recomendada: 70%+</div></div><div class="pc ${brecha>0?'alert':'ok'}"><div class="pc-l">Meta $50K/mes</div><div class="pc-v ${brecha>0?'neg':'pos'}">${brecha>0?'−'+fmtP(brecha):'¡Cubierta!'}</div><div class="pc-ctx">${brecha>0?'Brecha mensual a cubrir con tu patrimonio':'Tu pensión supera la meta clase C'}</div></div>`;
   const durPct=Math.min((aniosDura/30)*100,100),dc=aniosDura>=20?'ok':aniosDura>=10?'mid':'low',dcol=aniosDura>=20?'var(--sage)':aniosDura>=10?'var(--warn)':'var(--danger)';
-  document.getElementById('durWrap').innerHTML=`<div class="dur-head"><div class="dur-title">¿Cuántos años te alcanza el dinero?</div><div class="dur-yr ${dc}">${aniosDura>=99?'30+':aniosDura} años</div></div><div class="dur-track"><div class="dur-fill" id="dFill" style="width:0%;background:${dcol}"></div><div class="dur-mark" style="left:${(20/30)*100}%"></div></div><div class="dur-leg"><span>0</span><span>↑ Meta: 20 años</span><span>30+</span></div><p style="font-size:.76rem;color:var(--ink-60);margin-top:9px;line-height:1.5">${aniosDura>=20?'✓ Tu patrimonio proyectado cubre el horizonte mínimo de 20 años.':mthNeed>0?`Para llegar a 20 años necesitas <strong>${fmtP(mthNeed)}/mes adicionales</strong> durante ${ytr} años.`:'Ajusta tu tasa de ahorro.'}</p>`;
+  document.getElementById('durWrap').innerHTML=`<div class="dur-head"><div class="dur-title">¿Cuántos años te alcanza el dinero?</div><div class="dur-yr ${dc}">${aniosDura>=99?'30+':aniosDura} años</div></div><div class="dur-track"><div class="dur-fill" id="dFill" style="width:0%;background:${dcol}"></div><div class="dur-mark" style="left:${(20/30)*100}%"></div></div><div class="dur-leg"><span>0</span><span>↑ Meta: 20 años</span><span>30+</span></div><p style="font-size:.76rem;color:var(--ink-60);margin-top:9px;line-height:1.5">${aniosDura>=20?'✓ Tu patrimonio proyectado cubre el horizonte mínimo de 20 años.':mthNeed>0?`Para llegar a 20 años necesitas <strong>${fmtP(mthNeed)}/mes adicionales</strong> durante ${ytr} años.`:'Ajusta tu tasa de ahorro para cubrir 20 años.'}</p>`;
   setTimeout(()=>{const df=document.getElementById('dFill');if(df)df.style.width=durPct+'%';},80);
-  const gMsgs={GenZ:{bg:'rgba(74,124,89,.08)',icon:'🌱',t:'Tu mayor activo es el tiempo.',b:`Con ${ytr} años para construir, empezar ahora tiene impacto exponencial.`},Millennial:{bg:'rgba(184,135,42,.08)',icon:'⚡',t:'Estás en el momento crítico.',b:`Los 30–43 son los años de mayor impacto. Cada año sin actuar duplica el esfuerzo.`},GenX:{bg:'rgba(184,135,42,.12)',icon:'🎯',t:'El momento de máxima urgencia.',b:`Con ${ytr} años al retiro, cada decisión importa más.`},Boomer:{bg:'rgba(166,48,32,.08)',icon:'🔔',t:'El tiempo es muy corto.',b:`Los próximos ${ytr} años son decisivos.`}};
-  const gm=gMsgs[gen];document.getElementById('genMsg').style.background=gm.bg;
-  document.getElementById('genMsg').innerHTML=`<div class="gm-icon">${gm.icon}</div><div class="gm-body"><strong>${gm.t}</strong>${gm.b}</div>`;
+  const gMsgs={GenZ:{bg:'rgba(74,124,89,.08)',icon:'🌱',t:'Tu mayor activo es el tiempo.',b:`Con ${ytr} años para construir, empezar ahora con disciplina —aunque sea poco— tiene impacto exponencial.`},Millennial:{bg:'rgba(184,135,42,.08)',icon:'⚡',t:'Estás en el momento crítico.',b:`Los 30–43 son los años de mayor impacto: ingresos creciendo y horizonte suficiente. Cada año sin actuar duplica el esfuerzo.`},GenX:{bg:'rgba(184,135,42,.12)',icon:'🎯',t:'El momento de máxima urgencia.',b:`Con ${ytr} años al retiro, cada decisión importa más. Tus ingresos probablemente están en su punto más alto — úsalos bien.`},Boomer:{bg:'rgba(166,48,32,.08)',icon:'🔔',t:S.age>=55?'El tiempo es muy corto.':'Última oportunidad de impacto.',b:S.age>=55?`Con menos de 10 años, el foco debe ser maximizar lo acumulado y planear la desacumulación.`:`Los próximos ${ytr} años son decisivos: elimina deudas, maximiza AFORE, reduce comisiones.`}};
+  const gm=gMsgs[gen];document.getElementById('genMsg').style.background=gm.bg;document.getElementById('genMsg').innerHTML=`<div class="gm-icon">${gm.icon}</div><div class="gm-body"><strong>${gm.t}</strong>${gm.b}</div>`;
   updateJBar('s1');
 }
 
 const Qs=[
-  {id:'rel',block:0,tag:'Tolerancia Emocional',text:'¿Cómo describes tu relación con el dinero hoy?',sub:'Sin juicio — solo queremos entenderte.',opts:[{t:'Me genera ansiedad profunda. Prefiero certeza.',s:{tol:1}},{t:'Me incomoda, pero puedo tolerarlo.',s:{tol:2}},{t:'Lo acepto como parte natural del proceso.',s:{tol:3}},{t:'Lo veo como oportunidad.',s:{tol:4}}]},
-  {id:'t2',block:0,tag:'Tolerancia Emocional',text:'Tienes $500,000 invertidos. En 3 meses valen $390,000. ¿Qué harías?',sub:'Una caída del 22%.',opts:[{t:'Vendería todo.',s:{tol:1}},{t:'Me preocuparía mucho.',s:{tol:2}},{t:'No haría nada.',s:{tol:3}},{t:'Compraría más.',s:{tol:4}}]},
-  {id:'t3',block:0,tag:'Tolerancia Emocional',text:'¿Cuánto tiempo puedes tolerar ver tu portafolio en rojo?',sub:'Tu experiencia real.',opts:[{t:'Menos de un mes.',s:{tol:1}},{t:'1 a 3 meses.',s:{tol:2}},{t:'3 a 12 meses.',s:{tol:3}},{t:'Más de un año.',s:{tol:4}}]},
-  {id:'t4',block:0,tag:'Tolerancia Emocional',text:'65% de ganar $80K, 35% de perder $30K. ¿La harías?',sub:'Valor esperado positivo.',opts:[{t:'No.',s:{tol:1}},{t:'Lo pensaría mucho.',s:{tol:2}},{t:'Probablemente sí.',s:{tol:3}},{t:'Sí, definitivamente.',s:{tol:4}}]},
-  {id:'t5',block:0,tag:'Tolerancia Emocional',text:'¿Cuál frase describe mejor tu filosofía?',sub:'',opts:[{t:'"La seguridad primero."',s:{tol:1}},{t:'"Cuidadoso aunque crezca lento."',s:{tol:2}},{t:'"Acepto volatilidad."',s:{tol:3}},{t:'"Sin incomodidad no hay avance."',s:{tol:4}}]},
-  {id:'c1',block:1,tag:'Capacidad Objetiva',text:'¿Cuántos meses de gastos tienes en efectivo accesible?',sub:'',opts:[{t:'Sin fondo de emergencia.',s:{cap:1}},{t:'1 a 2 meses.',s:{cap:2}},{t:'3 a 6 meses.',s:{cap:3}},{t:'Más de 6 meses.',s:{cap:4}}]},
-  {id:'c2',block:1,tag:'Capacidad Objetiva',text:'¿Cómo describirías la estabilidad de tu ingreso?',sub:'',opts:[{t:'Muy variable.',s:{cap:1}},{t:'Mayormente estable.',s:{cap:2}},{t:'Estable con extras variables.',s:{cap:3}},{t:'Muy estable.',s:{cap:4}}]},
-  {id:'c3',block:1,tag:'Capacidad Objetiva',text:'¿Qué porcentaje va a pagos de deuda?',sub:'',opts:[{t:'Más del 40%.',s:{cap:1}},{t:'20% al 40%.',s:{cap:2}},{t:'10% al 20%.',s:{cap:3}},{t:'Menos del 10%.',s:{cap:4}}]},
-  {id:'c4',block:1,tag:'Capacidad Objetiva',text:'Si perdieras el 30% de tus inversiones hoy, ¿qué tan afectada estaría tu vida?',sub:'',opts:[{t:'Muy afectada.',s:{cap:1}},{t:'Afectada con sacrificios.',s:{cap:2}},{t:'Poco afectada.',s:{cap:3}},{t:'Sin impacto.',s:{cap:4}}]},
-  {id:'x1',block:2,tag:'Composure en Crisis',text:'En 2008 o COVID 2020, ¿qué hiciste?',sub:'',opts:[{t:'No tenía inversiones.',s:{comp:2}},{t:'Vendí.',s:{comp:1}},{t:'Me quedé paralizado.',s:{comp:2}},{t:'Mantuve la estrategia.',s:{comp:3}},{t:'Compré más.',s:{comp:4}}]},
-  {id:'x2',block:2,tag:'Composure en Crisis',text:'¿Con qué frecuencia revisas tus inversiones cuando el mercado cae?',sub:'',opts:[{t:'Varias veces al día.',s:{comp:1}},{t:'Una o dos veces al día.',s:{comp:2}},{t:'Una vez a la semana.',s:{comp:3}},{t:'Una vez al mes o menos.',s:{comp:4}}]},
-  {id:'x3',block:2,tag:'Composure en Crisis',text:'¿Has tomado decisiones influenciado por noticias de pánico?',sub:'',opts:[{t:'Sí, varias veces.',s:{comp:1}},{t:'Una o dos veces.',s:{comp:2}},{t:'Raramente.',s:{comp:3}},{t:'Nunca.',s:{comp:4}}]}
+  {id:'rel',block:0,tag:'Tolerancia Emocional',text:'¿Cómo describes tu relación con el dinero hoy?',sub:'Sin juicio — solo queremos entenderte.',opts:[{t:'Me genera ansiedad profunda. Prefiero certeza aunque el rendimiento sea menor.',s:{tol:1}},{t:'Me incomoda, pero puedo tolerarlo si entiendo los números y el horizonte.',s:{tol:2}},{t:'Lo acepto como parte natural del proceso de inversión.',s:{tol:3}},{t:'Lo veo como oportunidad — sin riesgo no hay rendimiento real.',s:{tol:4}}]},
+  {id:'t2',block:0,tag:'Tolerancia Emocional',text:'Tienes $500,000 invertidos. En 3 meses valen $390,000. ¿Qué harías?',sub:'Una caída del 22% — similar a correcciones históricas.',opts:[{t:'Vendería todo para detener las pérdidas.',s:{tol:1}},{t:'Me preocuparía mucho. Probablemente movería algo.',s:{tol:2}},{t:'No haría nada. Las caídas son temporales.',s:{tol:3}},{t:'Compraría más. Los precios están baratos.',s:{tol:4}}]},
+  {id:'t3',block:0,tag:'Tolerancia Emocional',text:'¿Cuánto tiempo puedes tolerar ver tu portafolio en rojo sin cambiar la estrategia?',sub:'Piensa en tu experiencia real, no en lo que "deberías" tolerar.',opts:[{t:'Menos de un mes — la ansiedad es insoportable.',s:{tol:1}},{t:'1 a 3 meses — con dificultad.',s:{tol:2}},{t:'3 a 12 meses — puedo mantener la calma.',s:{tol:3}},{t:'Más de un año — las caídas son ruido.',s:{tol:4}}]},
+  {id:'t4',block:0,tag:'Tolerancia Emocional',text:'65% de probabilidad de ganar $80K, 35% de perder $30K. ¿La harías?',sub:'El valor esperado es positivo. Pero hay riesgo real de perder.',opts:[{t:'No. La posibilidad de perder me detiene.',s:{tol:1}},{t:'Lo pensaría mucho. Dependería del momento.',s:{tol:2}},{t:'Probablemente sí. Los números tienen sentido.',s:{tol:3}},{t:'Sí, definitivamente. Riesgo calculado = oportunidad.',s:{tol:4}}]},
+  {id:'t5',block:0,tag:'Tolerancia Emocional',text:'¿Cuál frase describe mejor tu filosofía con el dinero?',sub:'Piensa en cómo decides en la práctica.',opts:[{t:'"Más vale pájaro en mano." La seguridad primero, siempre.',s:{tol:1}},{t:'"Prefiero ser cuidadoso aunque crezca más lento."',s:{tol:2}},{t:'"Acepto volatilidad a cambio de mejores rendimientos."',s:{tol:3}},{t:'"Sin incomodidad no hay avance real."',s:{tol:4}}]},
+  {id:'c1',block:1,tag:'Capacidad Objetiva',text:'¿Cuántos meses de gastos tienes disponibles en efectivo o cuentas accesibles?',sub:'Tu fondo de emergencia determina tu capacidad real de invertir a largo plazo.',opts:[{t:'No tengo fondo de emergencia — vivo al día.',s:{cap:1}},{t:'1 a 2 meses de gastos.',s:{cap:2}},{t:'3 a 6 meses de gastos.',s:{cap:3}},{t:'Más de 6 meses de gastos.',s:{cap:4}}]},
+  {id:'c2',block:1,tag:'Capacidad Objetiva',text:'¿Cómo describirías la estabilidad de tu ingreso mensual?',sub:'Un ingreso volátil reduce la capacidad real de asumir riesgo.',opts:[{t:'Muy variable — comisiones, freelance, negocio con altibajos.',s:{cap:1}},{t:'Mayormente estable con picos y valles.',s:{cap:2}},{t:'Estable, con ingresos adicionales variables.',s:{cap:3}},{t:'Muy estable — empleo formal, sueldo fijo, difícil que cambie.',s:{cap:4}}]},
+  {id:'c3',block:1,tag:'Capacidad Objetiva',text:'¿Qué porcentaje de tus ingresos mensuales va a pagos de deuda?',sub:'Incluye tarjetas, préstamos, auto, hipoteca.',opts:[{t:'Más del 40% — es una carga pesada.',s:{cap:1}},{t:'20% al 40% — manejable pero con poco margen.',s:{cap:2}},{t:'10% al 20% — tengo control.',s:{cap:3}},{t:'Menos del 10% o sin deudas de consumo.',s:{cap:4}}]},
+  {id:'c4',block:1,tag:'Capacidad Objetiva',text:'Si perdieras el 30% de tus inversiones hoy, ¿qué tan afectada estaría tu vida?',sub:'Mide si puedes absorber pérdidas sin impacto inmediato.',opts:[{t:'Muy afectada — son mi único respaldo.',s:{cap:1}},{t:'Afectada, pero podría adaptarme con sacrificios.',s:{cap:2}},{t:'Poco afectada — tengo otros recursos.',s:{cap:3}},{t:'Sin impacto — es solo una parte de mi patrimonio.',s:{cap:4}}]},
+  {id:'x1',block:2,tag:'Composure en Crisis',text:'Durante 2008, COVID 2020 o cualquier caída que hayas vivido, ¿qué hiciste?',sub:'Tu comportamiento pasado es el mejor predictor del futuro.',opts:[{t:'No tenía inversiones entonces.',s:{comp:2}},{t:'Vendí para protegerme.',s:{comp:1}},{t:'Me quedé paralizado/a sin hacer nada.',s:{comp:2}},{t:'Mantuve mi estrategia aunque fue difícil.',s:{comp:3}},{t:'Aproveché para invertir más.',s:{comp:4}}]},
+  {id:'x2',block:2,tag:'Composure en Crisis',text:'¿Con qué frecuencia revisas el valor de tus inversiones cuando el mercado cae?',sub:'Quienes revisan constantemente tienden a tomar peores decisiones.',opts:[{t:'Varias veces al día — no puedo evitarlo.',s:{comp:1}},{t:'Una o dos veces al día.',s:{comp:2}},{t:'Una o dos veces a la semana.',s:{comp:3}},{t:'Una vez al mes o menos — confío en el proceso.',s:{comp:4}}]},
+  {id:'x3',block:2,tag:'Composure en Crisis',text:'¿Has tomado decisiones financieras influenciado/a por noticias de pánico o el entorno?',sub:'La influencia del entorno es el gap entre perfil declarado y real.',opts:[{t:'Sí, varias veces — me afectan mucho.',s:{comp:1}},{t:'Una o dos veces más de lo que debería.',s:{comp:2}},{t:'Raramente — trato de mantener la cabeza fría.',s:{comp:3}},{t:'Nunca — filtro el ruido y me apego a la estrategia.',s:{comp:4}}]}
 ];
-const BLOCKS=[{label:'Tolerancia Emocional',desc:'Tu disposición psicológica.',qs:5},{label:'Capacidad Objetiva',desc:'Tu margen financiero real.',qs:4},{label:'Composure en Crisis',desc:'Tu comportamiento en caídas.',qs:3}];
+const BLOCKS=[{label:'Tolerancia Emocional',desc:'Tu disposición psicológica ante la volatilidad.',qs:5},{label:'Capacidad Objetiva',desc:'Tu margen financiero real para absorber pérdidas.',qs:4},{label:'Composure en Crisis',desc:'Tu comportamiento real cuando los mercados caen.',qs:3}];
 const BLOCK_START=[0,5,9];
 let quizStarted=false;
 
 function resetS2(){
-  quizStarted=false;S.currentQ=0;S.answers={};S.archetype=null;S.profileDone=false;
+  quizStarted=false;S.currentQ=0;S.answers={};S.scores={tol:60,cap:55,comp:60};S.archetype=null;S.profileDone=false;
   const pr=document.getElementById('profileReveal');if(pr)pr.className='';
   const qs=document.getElementById('quizSection');if(qs)qs.style.display='none';
   const pi=document.getElementById('possIntro');if(pi)pi.style.display='';
+  const pc=document.getElementById('possCards');if(pc)pc.innerHTML='';
 }
-function initS2(){if(!quizStarted){initPoss();}}
+function initS2(){if(!quizStarted)initPoss();}
 function initPoss(){
   if(!S.inc)return;
   const inc=S.inc*1000,ytr=Math.max(65-S.age,2),mths=ytr*12;
@@ -888,110 +1024,128 @@ function initPoss(){
   const pc=document.getElementById('possCards');if(!pc)return;
   pc.innerHTML=cards.map(([k,cls,lbl,rate,r])=>{
     const rm=Math.pow(1+r,1/12)-1,fvF=(Math.pow(1+rm,mths)-1)/rm;
-    const tr2=Math.min(.26+Math.floor(Math.max(S.yrs-25,0)/5)*.055,.60);
-    const pen=inc*tr2+BIENE,brecha=Math.max(PEN_O-pen,0),mo=brecha*12*VP20;
+    const tr=Math.min(.26+Math.floor(Math.max(S.yrs-25,0)/5)*.055,.60);
+    const pen=inc*tr+BIENE,brecha=Math.max(PEN_O-pen,0),mo=brecha*12*VP20;
     const mthNeed=mo>0?Math.max(mo/fvF-inc*.065,0):0,pct=Math.round(mthNeed/inc*100);
-    return `<div class="poss-card ${k}"><div class="poss-tag ${cls}">${lbl}</div><div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px"><div class="poss-rate ${cls}">${rate}</div><div style="font-size:.8rem;color:var(--ink-60)">tasa real anual</div></div><div class="poss-detail"><strong>Ahorro adicional: ${fmtP(mthNeed)}/mes</strong><br>(${pct}% de tu ingreso · ${ytr} años)</div></div>`;
+    return `<div class="poss-card ${k}"><div class="poss-tag ${cls}">${lbl}</div><div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px"><div class="poss-rate ${cls}">${rate}</div><div style="font-size:.8rem;color:var(--ink-60)">tasa real anual</div></div><div class="poss-detail"><strong>Ahorro adicional necesario: ${fmtP(mthNeed)}/mes</strong><br>(${pct}% de tu ingreso · ${ytr} años · MO de brecha: ${fmtM(mo)})</div></div>`;
   }).join('');
 }
 function startQuiz(){
   quizStarted=true;S.currentQ=0;S.answers={};
   const pi=document.getElementById('possIntro'),qs=document.getElementById('quizSection'),pr=document.getElementById('profileReveal');
   if(pi)pi.style.display='none';if(pr)pr.className='';
-  if(qs){qs.style.display='block';}
-  renderQ(0);
+  if(qs){qs.style.display='block';qs.style.visibility='visible';qs.style.opacity='1';}
+  try{renderQ(0);}catch(e){const p=document.getElementById('qPanel');if(p)p.innerHTML='<div style="padding:20px;color:red">Error: '+e.message+'</div>';}
 }
 function renderQ(idx){
   S.currentQ=idx;const q=Qs[idx],total=Qs.length,isLast=idx===total-1,L=['A','B','C','D','E'];
   let blocksHtml='';
   for(let bi=0;bi<BLOCKS.length;bi++){
     const blk=BLOCKS[bi],start=BLOCK_START[bi],inB=idx>=start&&idx<start+blk.qs,done=idx>=start+blk.qs;
-    let dots='';
-    for(let di=0;di<blk.qs;di++){const qi=start+di,qid=Qs[qi]?Qs[qi].id:'';const cls=S.answers[qid]!==undefined?'dot filled':(qi===idx?'dot adot':'dot');dots+=`<div class="${cls}"></div>`;}
+    let dots='';for(let di=0;di<blk.qs;di++){const qi=start+di,qid=Qs[qi]?Qs[qi].id:'';const cls=S.answers[qid]!==undefined?'dot filled':(qi===idx?'dot adot':'dot');dots+=`<div class="${cls}"></div>`;}
     blocksHtml+=`<div class="ss-block${inB?' active':done?' done':''}"><div class="ssb-num">Bloque 0${bi+1} · ${blk.qs} preguntas</div><div class="ssb-title">${blk.label}</div><div class="ssb-desc">${blk.desc}</div><div class="ssb-dots">${dots}</div></div>`;
   }
   const sb=document.getElementById('sideBlocks');if(sb)sb.innerHTML=blocksHtml;
-  let optsHtml='';
-  for(let oi=0;oi<q.opts.length;oi++){const sel=S.answers[q.id]===oi?' sel':'';optsHtml+=`<button class="opt${sel}" onclick="selOpt(${oi})"><span class="opt-l">${L[oi]}</span><span class="opt-t">${q.opts[oi].t}</span></button>`;}
+  let optsHtml='';for(let oi=0;oi<q.opts.length;oi++){const sel=S.answers[q.id]===oi?' sel':'';optsHtml+=`<button class="opt${sel}" onclick="selOpt(${oi})"><span class="opt-l">${L[oi]}</span><span class="opt-t">${q.opts[oi].t}</span></button>`;}
   const antBtn=idx>0?`<button class="btn-qb" onclick="renderQ(${idx-1})">← Anterior</button>`:'';
   const nextCls=S.answers[q.id]!==undefined?'btn-qn on':'btn-qn';
-  const nextClick=isLast?'computeProfile()':`renderQ(${idx+1})`;
-  const html=`<div class="fi"><div class="q-counter">Pregunta ${idx+1} de ${total}</div><div class="q-block-tag b${q.block+1}">${q.tag}</div><div class="q-text">${q.text}</div><div class="q-sub">${q.sub}</div><div class="opts">${optsHtml}</div><div class="q-nav">${antBtn}<button class="${nextCls}" onclick="${nextClick}">${isLast?'Ver mi perfil →':'Siguiente →'}</button></div></div>`;
+  const html=`<div class="fi"><div class="q-counter">Pregunta ${idx+1} de ${total}</div><div class="q-block-tag b${q.block+1}">${q.tag}</div><div class="q-text">${q.text}</div><div class="q-sub">${q.sub}</div><div class="opts">${optsHtml}</div><div class="q-nav">${antBtn}<button class="${nextCls}" onclick="${isLast?'computeProfile()':'renderQ('+(idx+1)+')'}">${isLast?'Ver mi perfil →':'Siguiente →'}</button></div></div>`;
   const qp=document.getElementById('qPanel');if(qp)qp.innerHTML=html;
+  document.getElementById('quizSection').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function selOpt(i){S.answers[Qs[S.currentQ].id]=i;renderQ(S.currentQ);}
+
 function computeProfile(){
   try{
     const sc={tol:0,cap:0,comp:0},max={tol:20,cap:16,comp:12};
     Qs.forEach(q=>{const a=S.answers[q.id];if(a===undefined)return;const s=q.opts[a].s;Object.entries(s).forEach(([k,v])=>sc[k]+=v);});
     S.scores={tol:Math.round(sc.tol/max.tol*100),cap:Math.round(sc.cap/max.cap*100),comp:Math.round(sc.comp/max.comp*100)};
     const hi_t=S.scores.tol>=55,hi_c=S.scores.cap>=55,pKey=hi_t&&hi_c?'HH':hi_t?'HA':hi_c?'LH':'LA';
-    const ARCH={HH:{base:'E',name:'El Estratega',hl:'Estratega',tag:'Tolerancia alta y capacidad real.',rate:.045},HA:{base:'C',name:'El Explorador',hl:'Explorador',tag:'Quieres riesgo pero tu base necesita fortalecerse.',rate:.030},LH:{base:'C',name:'El Consolidador',hl:'Consolidador',tag:'Situación sólida, perfil emocional requiere estabilidad.',rate:.020},LA:{base:'N',name:'El Navegante',hl:'Navegante',tag:'Tanto tu tolerancia como capacidad apuntan hacia la cautela.',rate:.015}};
+    const ARCH={HH:{base:'E',name:'El Estratega',hl:'Estratega',tag:'Tolerancia alta y capacidad real. Puedes asumir riesgo sin comprometer tu estabilidad.',rate:.045},HA:{base:'C',name:'El Explorador',hl:'Explorador',tag:'Quieres asumir riesgo pero tu base financiera necesita fortalecerse primero.',rate:.030},LH:{base:'C',name:'El Consolidador',hl:'Consolidador',tag:'Tu situación financiera es sólida, pero tu perfil emocional requiere estabilidad.',rate:.020},LA:{base:'N',name:'El Navegante',hl:'Navegante',tag:'Tanto tu tolerancia como tu capacidad apuntan hacia la cautela. Las bases primero.',rate:.015}};
     const arch=ARCH[pKey];if(S.scores.comp<40)arch.rate=Math.max(arch.rate-.01,.015);
     S.archetype=arch;S.effectiveRate=arch.rate;S.profileDone=true;saveS();
     document.getElementById('quizSection').style.display='none';
-    const pr=document.getElementById('profileReveal');pr.classList.add('show');
+    // Asegurar que s2 esté activo y visible
+    document.querySelectorAll('.screen').forEach(s=>{s.classList.remove('active');s.style.display='none';});
+    const s2el=document.getElementById('s2');s2el.style.display='';s2el.classList.add('active');
+    const pr=document.getElementById('profileReveal');pr.classList.add('show');pr.style.display='block';
     buildAvatar(arch);
     const genLabel={GenZ:'Generación Z (≤29)',Millennial:'Millennial (30–43)',GenX:'Generación X (44–58)',Boomer:'Baby Boomer (59+)'}[S.generation]||'';
     document.getElementById('prGen').textContent=genLabel;
     document.getElementById('prName').innerHTML=`${S.alias?`<span style="font-size:.42em;font-family:'DM Mono',monospace;display:block;margin-bottom:3px;letter-spacing:2px;text-transform:uppercase;color:var(--sage-l)">Hola, ${S.alias}</span>`:''}El <span>${arch.hl}</span>`;
     document.getElementById('prTag').textContent=arch.tag;
-    const fmtScore=(val,lbl,col)=>`<div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 12px"><div style="font-family:'DM Mono',monospace;font-size:.56rem;color:rgba(253,252,248,.32);text-transform:uppercase;margin-bottom:4px">${lbl}</div><div style="display:flex;align-items:center;gap:8px"><div style="height:4px;background:rgba(255,255,255,.12);border-radius:100px;width:80px;overflow:hidden"><div style="height:100%;width:${val}%;background:${col};border-radius:100px"></div></div><span style="font-family:'DM Mono',monospace;font-size:.72rem;color:#fff">${val}%</span></div></div>`;
+    const fmtScore=(val,lbl,col)=>`<div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 12px"><div style="font-family:'DM Mono',monospace;font-size:.56rem;color:rgba(253,252,248,.32);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">${lbl}</div><div style="display:flex;align-items:center;gap:8px"><div style="height:4px;background:rgba(255,255,255,.12);border-radius:100px;width:80px;overflow:hidden"><div style="height:100%;width:${val}%;background:${col};border-radius:100px"></div></div><span style="font-family:'DM Mono',monospace;font-size:.72rem;color:#fff">${val}%</span></div></div>`;
     document.getElementById('scorePills').innerHTML=fmtScore(S.scores.tol,'Tolerancia emocional','#4A7C59')+fmtScore(S.scores.cap,'Capacidad objetiva','#B8872A')+fmtScore(S.scores.comp,'Composure en crisis','#6B8FB5');
-    let cNote=S.scores.comp<40?'⚠️ Tu composure es bajo.':S.scores.comp>=70?'✓ Tu composure es alto.':'Tu composure es moderado.';
+    let cNote=S.scores.comp<40?'⚠️ Tu composure es bajo. Históricamente tiendes a reaccionar en crisis — recomendamos un perfil más conservador.':S.scores.comp>=70?'✓ Tu composure es alto. Mantienes la calma en crisis — esto es un activo real.':'Tu composure es moderado. Puedes mantener la estrategia en crisis moderadas, pero en caídas severas podrías necesitar apoyo.';
     document.getElementById('composureNote').textContent=cNote;
     const mCells={HH:'mc-HH',HA:'mc-HA',LH:'mc-LH',LA:'mc-LA'};
     Object.values(mCells).forEach(id=>{const el=document.getElementById(id);if(el)el.style.opacity='.28';});
-    const ac=document.getElementById(mCells[pKey]);if(ac){ac.style.opacity='1';ac.style.outline='2px solid var(--sage)';}
+    const activeCell=document.getElementById(mCells[pKey]);if(activeCell){activeCell.style.opacity='1';activeCell.style.outline='2px solid var(--sage)';}
     document.getElementById('prRate').innerHTML=`<span style="color:var(--gold-l)">${(arch.rate*100).toFixed(1)}%</span> real anual`;
-    const rateLabels={.045:'Perfil agresivo',.030:'Perfil moderado',.020:'Perfil conservador-moderado',.015:'Perfil conservador'};
+    const rateLabels={.045:'Perfil agresivo — portafolio 80–100% renta variable',.030:'Perfil moderado — portafolio 60% renta variable / 40% renta fija',.020:'Perfil conservador-moderado — portafolio 40% renta variable / 60% renta fija',.015:'Perfil conservador — portafolio 20% renta variable / 80% renta fija'};
     document.getElementById('prRateSub').textContent=rateLabels[arch.rate]||'';
-    const trData={E:{l:['Fortaleza','Oportunidad clave','Tasa recomendada','Tu cohorte ENIF'],v:['Claridad y disciplina','Maximizar fee alpha','Agresivo 4.5% real','~8% mexicanos']},C:{l:['Fortaleza','Oportunidad clave','Tasa recomendada','Tu cohorte ENIF'],v:['Disciplina y visión','Reducir comisiones','Moderado 3.0% real','~15% mexicanos']},N:{l:['Fortaleza','Oportunidad clave','Tasa recomendada','Tu cohorte ENIF'],v:['Sensibilidad emocional','Fondo de emergencia','Conservador 1.5% real','~42% mexicanos']}};
-    const trD=trData[arch.base]||trData.C;
-    document.getElementById('prTraits').innerHTML=trD.l.map((l,i)=>`<div class="pr-tr"><div class="pr-trl">${l}</div><div class="pr-trv">${trD.v[i]}</div></div>`).join('');
     const inc=S.inc*1000,ytr=Math.max(65-S.age,2),mths=ytr*12;
+    const rm15=Math.pow(1.015,1/12)-1,rm45=Math.pow(1.045,1/12)-1;
     const tr2=Math.min(.26+Math.floor(Math.max(S.yrs-25,0)/5)*.055,.60);
     const pen2=inc*tr2+3100,br2=Math.max(50000-pen2,0),MO2=br2*12*VP20;
-    setTimeout(()=>drawMiniChart('miniAccumChart',arch.rate,S.inc,S.age,MO2),150);
-    updateJBar('s2');
-    window.scrollTo(0,0);
+    const aforePat=inc*.065;
+    const proy15=mths>0?aforePat*((Math.pow(1+rm15,mths)-1)/rm15):0;
+    const proy45=mths>0?aforePat*((Math.pow(1+rm45,mths)-1)/rm45):0;
+    const iprBase=MO2>0?Math.round((proy15/MO2)*100):0;
+    const riskAllyEl=document.getElementById('riskAllyMsg'),riskAllyTxt=document.getElementById('riskAllyTxt');
+    const fmtM2=n=>n>=1e6?'$'+(n/1e6).toFixed(1)+'M':'$'+Math.round(n/1000)+'K';
+    if(iprBase<60&&riskAllyEl&&riskAllyTxt){riskAllyEl.style.display='block';const diff=proy45-proy15;riskAllyTxt.innerHTML=`Tu IPR base (solo Afore) es <strong style="color:var(--gold-l)">${iprBase}%</strong>. Con tasa conservadora (1.5%) proyectas <strong>${fmtM2(proy15)}</strong>. Con perfil agresivo (4.5%) proyectas <strong>${fmtM2(proy45)}</strong> — una diferencia de <strong>${fmtM2(diff)}</strong>. Con una brecha grande, <strong>el riesgo puede ser tu aliado</strong> si tienes el horizonte y la capacidad para absorber volatilidad.`;}
+    // Dibujar chart con delay suficiente para que el DOM esté visible
+    setTimeout(()=>{
+      const mc=document.getElementById('miniAccumChart');
+      if(mc){const r=mc.getBoundingClientRect();if(r.width===0){mc.style.width='100%';mc.setAttribute('width','340');}  }
+      drawMiniChart('miniAccumChart',arch.rate,S.inc,S.age,MO2);
+    },250);
+    const trData={E:{l:['Fortaleza','Oportunidad clave','Tasa recomendada','Tu cohorte ENIF'],v:['Claridad y disciplina avanzada','Maximizar fee alpha y tax alpha','Agresivo 4.5% real','~8% mexicanos (nivel avanzado)']},C:{l:['Fortaleza','Oportunidad clave','Tasa recomendada','Tu cohorte ENIF'],v:['Disciplina y visión de largo plazo','Reducir comisiones en productos','Moderado 3.0% real','~15% mexicanos (financieramente saludables)']},N:{l:['Fortaleza','Oportunidad clave','Tasa recomendada','Tu cohorte ENIF'],v:['Sensibilidad y conciencia emocional','Fondo de emergencia de 3 meses','Conservador 1.5% real','~42% mexicanos (zona Coping)']}};
+    const trD=trData[arch.base]||trData.C;
+    document.getElementById('prTraits').innerHTML=trD.l.map((l,i)=>`<div class="pr-tr"><div class="pr-trl">${l}</div><div class="pr-trv">${trD.v[i]}</div></div>`).join('');
+    updateJBar('s2');window.scrollTo(0,0);
     setTimeout(()=>{const pr2=document.getElementById('profileReveal');if(pr2)pr2.scrollIntoView({behavior:'smooth',block:'start'});},200);
-  }catch(e){alert('Error: '+e.message);}
+  }catch(e){alert('Error en computeProfile: '+e.message);}
 }
+
 function buildAvatar(arch){
   const g=S.gender,skin={M:'#D4A574',F:'#E8B890',X:'#C9A87A'}[g]||'#D4A574';
   const hair=S.age<35?'#2C1810':S.age<50?'#5C3D2E':'#8B7355';
   const ac=arch.rate>=.04?'#C49A3C':'#4A7C59',bg=arch.rate>=.04?'#3d2e0a':'#1a3d26';
-  const svg=`<svg viewBox="0 0 84 84" width="84" height="84"><circle cx="42" cy="42" r="40" fill="${bg}" opacity=".9"/><ellipse cx="42" cy="70" rx="20" ry="13" fill="#2C3E50" opacity=".9"/><rect x="38.5" y="50" width="7" height="9" fill="${skin}" rx="2"/><ellipse cx="42" cy="39" rx="15" ry="17" fill="${skin}"/><ellipse cx="42" cy="25" rx="15.5" ry="8" fill="${hair}"/><ellipse cx="36.5" cy="38" rx="3" ry="3.2" fill="white"/><ellipse cx="47.5" cy="38" rx="3" ry="3.2" fill="white"/><circle cx="37.2" cy="38" r="2" fill="#2C1810"/><circle cx="48.2" cy="38" r="2" fill="#2C1810"/><path d="M37.5 46 Q42 49.5 46.5 46" stroke="#c0736a" stroke-width="1.5" fill="none"/></svg>`;
+  let svg='';
+  if(g==='F')svg=`<svg viewBox="0 0 84 84" width="84" height="84"><circle cx="42" cy="42" r="40" fill="${bg}" opacity=".9"/><ellipse cx="42" cy="68" rx="18" ry="14" fill="${ac}" opacity=".8"/><rect x="38" y="50" width="8" height="10" fill="${skin}" rx="2"/><ellipse cx="42" cy="40" rx="16" ry="18" fill="${skin}"/><ellipse cx="42" cy="26" rx="17" ry="10" fill="${hair}"/><ellipse cx="27" cy="38" rx="5" ry="10" fill="${hair}"/><ellipse cx="57" cy="38" rx="5" ry="10" fill="${hair}"/><ellipse cx="36" cy="39" rx="3" ry="3.5" fill="white"/><ellipse cx="48" cy="39" rx="3" ry="3.5" fill="white"/><circle cx="37" cy="39" r="2" fill="#2C1810"/><circle cx="49" cy="39" r="2" fill="#2C1810"/><path d="M37 47 Q42 51 47 47" stroke="#c0736a" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="26.5" cy="43" r="2" fill="${ac}"/><circle cx="57.5" cy="43" r="2" fill="${ac}"/></svg>`;
+  else if(g==='M')svg=`<svg viewBox="0 0 84 84" width="84" height="84"><circle cx="42" cy="42" r="40" fill="${bg}" opacity=".9"/><ellipse cx="42" cy="70" rx="20" ry="13" fill="#2C3E50" opacity=".9"/><polygon points="42,54 39,62 42,65 45,62" fill="${ac}" opacity=".9"/><rect x="38.5" y="50" width="7" height="9" fill="${skin}" rx="2"/><ellipse cx="42" cy="39" rx="15" ry="17" fill="${skin}"/><ellipse cx="42" cy="25" rx="15.5" ry="8" fill="${hair}"/><ellipse cx="27.5" cy="40" rx="3" ry="4" fill="${skin}"/><ellipse cx="56.5" cy="40" rx="3" ry="4" fill="${skin}"/><ellipse cx="36.5" cy="38" rx="3" ry="3.2" fill="white"/><ellipse cx="47.5" cy="38" rx="3" ry="3.2" fill="white"/><circle cx="37.2" cy="38" r="2" fill="#2C1810"/><circle cx="48.2" cy="38" r="2" fill="#2C1810"/><path d="M37.5 46 Q42 49.5 46.5 46" stroke="#c0736a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>`;
+  else svg=`<svg viewBox="0 0 84 84" width="84" height="84"><circle cx="42" cy="42" r="40" fill="${bg}" opacity=".9"/><ellipse cx="42" cy="68" rx="18" ry="13" fill="${ac}" opacity=".7"/><rect x="38.5" y="50" width="7" height="9" fill="${skin}" rx="2"/><ellipse cx="42" cy="39" rx="15.5" ry="17" fill="${skin}"/><ellipse cx="42" cy="25" rx="16" ry="9" fill="${hair}"/><ellipse cx="36.5" cy="38.5" rx="3.2" ry="3.5" fill="white"/><ellipse cx="47.5" cy="38.5" rx="3.2" ry="3.5" fill="white"/><circle cx="37.2" cy="38.5" r="2.1" fill="#2C1810"/><circle cx="48.2" cy="38.5" r="2.1" fill="#2C1810"/><path d="M37.5 46.5 Q42 50 46.5 46.5" stroke="#c0736a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>`;
   const avEl=document.getElementById('avEl');if(avEl)avEl.innerHTML=`<div class="av-ring"></div><div class="av-bg" style="background:radial-gradient(circle at 40% 35%,${bg}cc,${bg}ee)">${svg}</div><div class="av-badge">${arch.hl}</div>`;
 }
 
-function showConv(){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  const conv=document.getElementById('convSection');conv.style.display='block';window.scrollTo(0,0);
-}
+function showConv(){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('convSection').style.display='block';window.scrollTo(0,0);}
 function initS3(){const aa=document.getElementById('authAlias');if(aa&&S.alias)aa.value=S.alias;updateJBar('s3');}
 function doRegister(plan){S.plan=plan;showConv();}
 function enterDash(){
-  S.loggedIn=true;
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  S.loggedIn=true;document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById('convSection').style.display='none';
   const dash=document.getElementById('dashSection');dash.style.display='block';dash.classList.add('active');
-  document.getElementById('btnCerrar').style.display='inline-block';
-  window.scrollTo(0,0);initDash();
+  document.getElementById('btnCerrar').style.display='inline-block';window.scrollTo(0,0);initDash();
 }
 
 function initDash(){
+  if(S.archetype){
+    const b=document.getElementById('dashRiskBanner');
+    if(b){b.style.display='flex';document.getElementById('dashRiskLabel').textContent=S.archetype.name+' · '+({GenZ:'Gen Z',Millennial:'Millennial',GenX:'Gen X',Boomer:'Boomer'}[S.generation]||'')+' · composure '+(S.scores?.comp>=70?'alto':S.scores?.comp>=40?'moderado':'bajo');document.getElementById('dashRiskRate').textContent=(S.effectiveRate*100).toFixed(1)+'%';}
+  }
   const g=S.gender,ac=S.effectiveRate>=.04?'#C49A3C':'#4A7C59',bg=S.effectiveRate>=.04?'#3d2e0a':'#1a3d26';
   const skin={M:'#D4A574',F:'#E8B890',X:'#C9A87A'}[g]||'#D4A574';
-  const svg=`<svg viewBox="0 0 56 56" width="48" height="48"><circle cx="28" cy="28" r="26" fill="${bg}" opacity=".9"/><ellipse cx="28" cy="26" rx="10" ry="11" fill="${skin}"/></svg>`;
+  const svg=g==='F'?`<svg viewBox="0 0 56 56" width="48" height="48"><circle cx="28" cy="28" r="26" fill="${bg}" opacity=".9"/><ellipse cx="28" cy="46" rx="12" ry="9" fill="${ac}" opacity=".8"/><ellipse cx="28" cy="26" rx="10" ry="12" fill="${skin}"/><ellipse cx="28" cy="17" rx="11" ry="7" fill="${S.age<35?'#2C1810':S.age<50?'#5C3D2E':'#8B7355'}"/><ellipse cx="24" cy="26" rx="2" ry="2.2" fill="white"/><ellipse cx="32" cy="26" rx="2" ry="2.2" fill="white"/><circle cx="24.5" cy="26" r="1.3" fill="#2C1810"/><circle cx="32.5" cy="26" r="1.3" fill="#2C1810"/></svg>`:`<svg viewBox="0 0 56 56" width="48" height="48"><circle cx="28" cy="28" r="26" fill="${bg}" opacity=".9"/><ellipse cx="28" cy="47" rx="13" ry="8" fill="#2C3E50" opacity=".9"/><ellipse cx="28" cy="26" rx="10" ry="11" fill="${skin}"/><ellipse cx="28" cy="17" rx="10" ry="5" fill="${S.age<35?'#2C1810':S.age<50?'#5C3D2E':'#8B7355'}"/><ellipse cx="24" cy="25" rx="2" ry="2" fill="white"/><ellipse cx="32" cy="25" rx="2" ry="2" fill="white"/><circle cx="24.5" cy="25" r="1.3" fill="#2C1810"/><circle cx="32.5" cy="25" r="1.3" fill="#2C1810"/></svg>`;
   const dashAv=document.getElementById('dashAv');if(dashAv)dashAv.innerHTML=svg;
   const dashName=document.getElementById('dashName');if(dashName)dashName.textContent=S.alias||'Usuario';
   const dashArch=document.getElementById('dashArch');if(dashArch)dashArch.textContent=(S.archetype?.hl||'Constructor').toUpperCase();
   if(S.inc){const uInc=document.getElementById('uInc');if(uInc)uInc.value=S.inc;const uYrs=document.getElementById('uYrs');if(uYrs)uYrs.value=S.yrs||12;}
-  recalcDashIPR();buildDashMods();buildDashTimeline();calcFiscal2();
+  recalcDashIPR();buildDashMods();buildDashTimeline();buildDashPracs();calcFiscal2();
   setTimeout(update5D,300);showDS('ipr');
 }
+
 function recalcDashIPR(){
   const incK=parseFloat(document.getElementById('uInc').value)||S.inc||30;
   const sav=parseFloat(document.getElementById('uSav').value)||S.sav||8;
@@ -999,32 +1153,46 @@ function recalcDashIPR(){
   const deudaK=parseFloat(document.getElementById('uDeuda').value)||0;
   const propK=parseFloat(document.getElementById('uProp').value)||0;
   const yrs=parseFloat(document.getElementById('uYrs').value)||S.yrs||12;
-  const inc=incK*1000,r=S.effectiveRate||.030,rm=Math.pow(1+r,1/12)-1;
-  const ytr=Math.max(65-(S.age||38),2),mths=ytr*12;
-  const aforeProy=(aforeK*1000)*Math.pow(1+r,ytr)+inc*.065*((Math.pow(1+rm,mths)-1)/rm)+(inc*(sav/100))*((Math.pow(1+rm,mths)-1)/rm);
-  const propProy=(propK*1000)*Math.pow(1.02,ytr);
-  const tr2=Math.min(.26+Math.floor(Math.max(yrs-25,0)/5)*.055,.60);
-  const pen=inc*tr2+BIENE,brecha=Math.max(PEN_O-pen,0),MO_br=brecha*12*VP20;
-  const patTotal=aforeProy+propProy-(deudaK*1000);
+  const inc=incK*1000,afore=aforeK*1000,deuda=deudaK*1000,prop=propK*1000;
+  const r=S.effectiveRate||.030,rm=Math.pow(1+r,1/12)-1;
+  const ytr=Math.max(65-(S.age||38),2),mths=ytr*12,rch=.02/12;
+  const cap=inc*((1-Math.pow(1+rch,-mths))/rch)*.25;
+  const aforeProy=afore*Math.pow(1+r,ytr)+inc*.065*((Math.pow(1+rm,mths)-1)/rm)+(inc*(sav/100))*((Math.pow(1+rm,mths)-1)/rm);
+  const propProy=prop*Math.pow(1.02,ytr);
+  const tr=Math.min(.26+Math.floor(Math.max(yrs-25,0)/5)*.055,.60);
+  const pen=inc*tr+BIENE,brecha=Math.max(PEN_O-pen,0),MO_br=brecha*12*VP20;
+  const patTotal=cap+aforeProy+propProy-deuda;
   const ipr=Math.min(Math.round((patTotal/MO_br)*100),150);
   const fmtM=n=>n>=1e6?'$'+(n/1e6).toFixed(1)+'M':'$'+Math.round(n/1000)+'K';
   const fmtP=n=>'$'+Math.round(n).toLocaleString('es-MX');
   const col=ipr>=100?'#90c49a':ipr>=60?'var(--gold-l)':'#e07060';
   const dashIprNum=document.getElementById('dashIprNum');if(dashIprNum)dashIprNum.innerHTML=`<span style="color:${col}">${ipr}</span><span style="font-size:.4em;color:rgba(253,252,248,.35)">%</span>`;
-  const dashIprSub=document.getElementById('dashIprSub');if(dashIprSub)dashIprSub.textContent=ipr>=100?'¡Superávit patrimonial!':ipr>=60?'En camino.':'Déficit. Hay acciones que pueden cambiar esto.';
+  const dashIprSub=document.getElementById('dashIprSub');if(dashIprSub)dashIprSub.textContent=ipr>=100?'¡Superávit patrimonial! Proyectas superar tu MO.':ipr>=60?'En camino. Sigue construyendo consistentemente.':'Déficit. Hay acciones concretas que pueden cambiar esto.';
   const dashIprGrid=document.getElementById('dashIprGrid');if(dashIprGrid)dashIprGrid.innerHTML=`<div class="ihc"><div class="ihc-l">Pensión/mes</div><div class="ihc-v warn">${fmtP(pen)}</div></div><div class="ihc"><div class="ihc-l">Brecha/mes</div><div class="ihc-v ${brecha>0?'neg':'pos'}">${brecha>0?fmtP(brecha):'$0 ✓'}</div></div><div class="ihc"><div class="ihc-l">Proyección</div><div class="ihc-v warn">${fmtM(aforeProy)}</div></div><div class="ihc"><div class="ihc-l">MO brecha</div><div class="ihc-v">${fmtM(MO_br)}</div></div>`;
-  const dashNudge=document.getElementById('dashNudge');
-  if(dashNudge){if(ipr<40)dashNudge.innerHTML=`<strong>Acción urgente:</strong> Configura una aportación a tu Afore.`;else if(ipr<70)dashNudge.innerHTML=`<strong>Buen avance:</strong> Aumentar tu ahorro 2% añadiría ${fmtM(inc*.02*12*ytr*1.5)} a tu proyección.`;else dashNudge.innerHTML=`<strong>¡Posición sólida!</strong>`;}
+  const moIpr=Math.min(Math.round((aforeProy/MO_br)*100),150);
+  const moEl=document.getElementById('dashMoPct'),moFill=document.getElementById('dashMoFill'),moMid=document.getElementById('dashMoMid');
+  if(moEl)moEl.innerHTML=`<span style="color:${moIpr>=100?'var(--sage)':moIpr>=60?'var(--warn)':'var(--danger)'}">${moIpr}%</span>`;
+  if(moFill){moFill.style.width=Math.min(moIpr,100)+'%';moFill.style.background=moIpr>=100?'var(--sage)':moIpr>=60?'var(--warn)':'var(--danger)';}
+  if(moMid)moMid.textContent=fmtM(MO_br*.5);
+  let nudge='';
+  if(ipr<40)nudge=`<strong>Acción urgente:</strong> Configura una aportación voluntaria a tu Afore esta semana, aunque sea $500/mes.`;
+  else if(ipr<70)nudge=`<strong>Buen avance:</strong> Aumentar tu ahorro en 2 puntos porcentuales añadiría ${fmtM(inc*.02*12*ytr*1.5)} a tu proyección.`;
+  else if(ipr<100)nudge=`<strong>Estás cerca:</strong> Explora el módulo fiscal — la deducción del Art. 151 puede llevarte al 100% antes de lo esperado.`;
+  else nudge=`<strong>¡Posición sólida!</strong> Enfócate en el fee alpha: reduce el costo de tus inversiones y maximiza tu legado.`;
+  const nudgeEl=document.getElementById('dashNudge');if(nudgeEl)nudgeEl.innerHTML=nudge;
   setTimeout(()=>drawMiniChart('dashAccumChart',S.effectiveRate||.030,incK,S.age||38,MO_br),100);
 }
 function saveIPR(){
-  S.iprHistory.push({date:new Date().toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'2-digit'}),ipr:document.getElementById('dashIprNum').textContent.replace('%','').trim()});
-  saveS();buildDashTimeline();alert('✓ IPR guardado.');
+  const ipr=parseInt((document.getElementById('dashIprNum')?.textContent||'0').replace('%',''))||0;
+  S.iprHistory.push({date:new Date().toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'2-digit'}),ipr});
+  saveS();buildDashTimeline();alert(`✓ IPR actualizado: ${ipr}%. Guardado en tu historial.`);
 }
 function buildDashMods(){
-  const mods=[{id:'fiscal',icon:'🟢',t:'Fiscal · Art. 151',s:'Cuánto te regresa el SAT.',locked:false},{id:'upgrade',icon:'🏦',t:'PPR · Tax Alpha',s:'El vehículo más eficiente.',locked:true},{id:'upgrade',icon:'👫',t:'Pareja · IPR combinado',s:'Tu posición como equipo.',locked:true},{id:'upgrade',icon:'💳',t:'Deudas · Impacto IPR',s:'¿Liquidar o invertir?',locked:true},{id:'upgrade',icon:'🏠',t:'Renta vs. Compra',s:'La decisión patrimonial más grande.',locked:true},{id:'upgrade',icon:'👧',t:'Hijos · MO educativo',s:'Cuánto apartar por hijo.',locked:true},{id:'upgrade',icon:'🏥',t:'Salud en Retiro',s:'El gasto que nadie presupuesta.',locked:true}];
+  const isPro=S.plan==='pro'||S.isPro;
+  const mods=[{id:'fiscal',icon:'🟢',t:'Fiscal · Art. 151',s:'Cuánto te regresa el SAT por aportar al PPR o Afore.',locked:false},{id:'ppr',icon:'🏦',t:'PPR · Tax Alpha',s:'El vehículo de acumulación más eficiente para clase C.',locked:!isPro},{id:'pareja',icon:'👫',t:'Pareja · IPR combinado',s:'Tu posición financiera como equipo de dos.',locked:!isPro},{id:'deudas',icon:'💳',t:'Deudas · Impacto IPR',s:'¿Liquidar o invertir? La respuesta en números reales.',locked:!isPro},{id:'renta',icon:'🏠',t:'Renta vs. Compra',s:'La decisión patrimonial más grande de tu vida.',locked:!isPro},{id:'hijos',icon:'👧',t:'Hijos · MO educativo',s:'Cuánto apartar por hijo según edad y universidad.',locked:!isPro},{id:'salud',icon:'🏥',t:'Salud en Retiro',s:'El gasto que nadie presupuesta: $8–25K/mes adicionales.',locked:!isPro}];
   const dm=document.getElementById('dashMods');if(!dm)return;
-  dm.innerHTML=mods.map(m=>`<div class="mod-c ${m.locked?'locked':''}" onclick="showDS('${m.id}')"><div class="mc-ic">${m.icon}</div><div class="mc-title">${m.t}</div><div class="mc-sub">${m.s}</div>${m.locked?'<div style="font-size:.7rem;color:var(--gold);margin-top:5px">🔒 PRO</div>':'<div style="font-size:.72rem;color:var(--sage);margin-top:5px;font-weight:500">→ Abrir</div>'}</div>`).join('');
+  dm.innerHTML=mods.map(m=>`<div class="mod-c ${m.locked?'locked':''}" onclick="showDS('${m.locked?'upgrade':m.id}')"><div class="mc-ic">${m.icon}</div><div class="mc-title">${m.t}</div><div class="mc-sub">${m.s}</div>${m.locked?'<div style="font-size:.7rem;color:var(--gold);margin-top:5px">🔒 PRO</div>':'<div style="font-size:.72rem;color:var(--sage);margin-top:5px;font-weight:500">→ Abrir</div>'}</div>`).join('');
+  const strip=document.getElementById('upgradeStrip');if(strip)strip.style.display=isPro?'none':'flex';
 }
 function buildDashTimeline(){
   const hist=[...(S.iprHistory||[])].reverse().slice(0,5);
@@ -1032,9 +1200,17 @@ function buildDashTimeline(){
   const dt=document.getElementById('dashTimeline');if(!dt)return;
   dt.innerHTML=hist.map(h=>`<div class="tl-item"><div class="tl-dot sage">↑</div><div><div class="tl-txt">IPR: <strong>${h.ipr}%</strong></div><div class="tl-date">${h.date}</div></div></div>`).join('');
 }
+function buildDashPracs(){
+  const pracs=[{i:'🏦',t:'Revisar saldo de Afore',d:'5 min'},{i:'📋',t:'Solicitar constancia SAT',d:'10 min'},{i:'💳',t:'Calcular tasa real de tarjeta',d:'5 min'}];
+  const dp=document.getElementById('dashPracs');if(!dp)return;
+  dp.innerHTML=pracs.map(p=>`<div style="display:flex;gap:9px;align-items:center;margin-bottom:10px;padding:9px 11px;background:#fff;border-radius:8px;border:1px solid var(--mist)"><span style="font-size:.95rem">${p.i}</span><div style="flex:1"><div style="font-size:.78rem;color:var(--ink)">${p.t}</div><div style="font-family:'DM Mono',monospace;font-size:.58rem;color:var(--ink-30)">${p.d}</div></div></div>`).join('');
+}
 function showDS(id){
   document.querySelectorAll('.dm-sec').forEach(s=>s.classList.remove('active'));
   const sec=document.getElementById('ds-'+id);if(sec)sec.classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  const labelMap={fiscal:'Fiscal',ppr:'PPR',pareja:'Pareja',deudas:'Deudas',renta:'Renta',hijos:'Hijos',salud:'Salud',ipr:'IPR',upgrade:'PRO','5d':'5D'};
+  document.querySelectorAll('.nav-item').forEach(n=>{if(n.textContent.includes(labelMap[id]||id))n.classList.add('active');});
   if(id==='fiscal')calcFiscal2();
   if(id==='5d')setTimeout(update5D,80);
   if(id==='ipr')recalcDashIPR();
@@ -1042,7 +1218,10 @@ function showDS(id){
 
 function calcFiscal2(){
   const sel=document.getElementById('fInc2');if(!sel)return;
-  const incMes=parseFloat(sel.value)||30,aportMes=parseFloat(document.getElementById('fAport2').value)||3000;
+  const useExact=sel.value==='0';
+  const exact=document.getElementById('fExact2');if(exact)exact.style.display=useExact?'block':'none';
+  const incMes=useExact?(parseFloat(document.getElementById('fIncNum2')?.value)||30):(parseFloat(sel.value)||30);
+  const aportMes=parseFloat(document.getElementById('fAport2').value)||3000;
   const incAnual=incMes*1000*12,aportAnual=aportMes*12,limDed=Math.min(176000,incAnual*.10);
   const dedEf=Math.min(aportAnual,limDed);
   const br=incMes*1000<200000?.2136:incMes*1000<350000?.2352:incMes*1000<600000?.30:incMes*1000<900000?.32:.34;
@@ -1052,34 +1231,42 @@ function calcFiscal2(){
   const fmtM=n=>n>=1e6?'$'+(n/1e6).toFixed(2)+'M':'$'+Math.round(n).toLocaleString('es-MX');
   const fmtP=n=>'$'+Math.round(n).toLocaleString('es-MX');
   const fa=document.getElementById('fiscalAmt2');if(fa)fa.textContent=fmtP(ahorro)+' /año';
-  const fs=document.getElementById('fiscalSub2');if(fs)fs.textContent=`Bracket ${Math.round(br*100)}% · Límite deducible: ${fmtP(limDed)}/año`;
-  const fg=document.getElementById('fiscalGrid2');if(fg)fg.innerHTML=`<div style="background:rgba(255,255,255,.07);border-radius:8px;padding:10px 12px"><div style="font-size:.58rem;color:rgba(253,252,248,.3);text-transform:uppercase;margin-bottom:3px">Límite deducible</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--gold-l)">${fmtP(limDed)}/año</div></div><div style="background:rgba(255,255,255,.07);border-radius:8px;padding:10px 12px"><div style="font-size:.58rem;color:rgba(253,252,248,.3);text-transform:uppercase;margin-bottom:3px">Rendimiento equiv.</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#90c49a">+${rendEq.toFixed(1)}%</div></div><div style="background:rgba(255,255,255,.07);border-radius:8px;padding:10px 12px"><div style="font-size:.58rem;color:rgba(253,252,248,.3);text-transform:uppercase;margin-bottom:3px">Ahorro reinvertido ${ytr}a</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#90c49a">${fmtM(aReinv)}</div></div>`;
-  const fi=document.getElementById('fiscalInsTxt2');if(fi)fi.innerHTML=aportAnual<limDed?`Podrías aportar <strong>${fmtP((limDed-aportAnual)/12)}/mes adicionales</strong> y seguir siendo 100% deducible.`:`Ya maximizas el Art. 151. Excedente: <strong>${fmtP(aportAnual-limDed)}/año</strong>.`;
+  const fs=document.getElementById('fiscalSub2');if(fs)fs.textContent=`Ahorro de ISR por aportar ${fmtP(aportAnual)}/año · Bracket ${Math.round(br*100)}% · Límite deducible: ${fmtP(limDed)}/año`;
+  const fg=document.getElementById('fiscalGrid2');if(fg)fg.innerHTML=`<div style="background:rgba(255,255,255,.07);border-radius:8px;padding:10px 12px"><div style="font-size:.58rem;color:rgba(253,252,248,.3);text-transform:uppercase;margin-bottom:3px">Límite deducible</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--gold-l)">${fmtP(limDed)}/año</div></div><div style="background:rgba(255,255,255,.07);border-radius:8px;padding:10px 12px"><div style="font-size:.58rem;color:rgba(253,252,248,.3);text-transform:uppercase;margin-bottom:3px">Rendimiento equiv.</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#90c49a">+${rendEq.toFixed(1)}% garantizado</div></div><div style="background:rgba(255,255,255,.07);border-radius:8px;padding:10px 12px"><div style="font-size:.58rem;color:rgba(253,252,248,.3);text-transform:uppercase;margin-bottom:3px">Ahorro reinvertido ${ytr}a</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#90c49a">${fmtM(aReinv)}</div></div>`;
+  const fi=document.getElementById('fiscalInsTxt2');if(fi)fi.innerHTML=aportAnual<limDed?`Podrías aportar <strong>${fmtP((limDed-aportAnual)/12)}/mes adicionales</strong> y seguir siendo 100% deducible. Ahorro fiscal adicional: <strong>${fmtP((limDed-aportAnual)*br)}/año</strong> que el SAT te regresaría en tu declaración.`:`Ya maximizas el límite del Art. 151. El excedente de <strong>${fmtP(aportAnual-limDed)}/año</strong> acumula sin ISR anual pero sin deducción inmediata. Considera un seguro con ahorro para el excedente.`;
 }
+document.addEventListener('change',e=>{if(e.target.id==='fInc2')calcFiscal2();});
 
 function drawMiniChart(canvasId,rate,incK,age,MO_brecha){
   const canvas=document.getElementById(canvasId);if(!canvas)return;
   const ctx=canvas.getContext('2d'),dpr=window.devicePixelRatio||1,rect=canvas.getBoundingClientRect();
   canvas.width=rect.width*dpr;canvas.height=rect.height*dpr;ctx.scale(dpr,dpr);
   const W=rect.width,H=rect.height,pl=44,pr=12,pt=14,pb=28,cW=W-pl-pr,cH=H-pt-pb;
-  const inc=incK*1000,ytr=Math.max(65-age,2),rm=Math.pow(1+rate,1/12)-1;
+  const inc=incK*1000,ytr=Math.max(65-age,2),rm=Math.pow(1+rate,1/12)-1,rm15=Math.pow(1.015,1/12)-1;
   const aforePat=inc*.065,yrs=Array.from({length:ytr+1},(_,i)=>i);
   const proj=yrs.map(y=>{const m=y*12;return m>0?aforePat*((Math.pow(1+rm,m)-1)/rm):0;});
+  const base=yrs.map(y=>{const m=y*12;return m>0?aforePat*((Math.pow(1+rm15,m)-1)/rm):0;});
   const maxV=Math.max(MO_brecha*1.15,...proj)*1.05;
   function xP(i){return pl+(i/ytr)*cW;}
   function yP(v){return pt+cH-Math.min(v/maxV,1)*cH;}
   ctx.clearRect(0,0,W,H);
+  const textCol='rgba(14,15,13,.3)';
+  [MO_brecha*.5,MO_brecha].forEach(v=>{if(v>0&&v<=maxV){ctx.strokeStyle='rgba(14,15,13,.06)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pl,yP(v));ctx.lineTo(W-pr,yP(v));ctx.stroke();ctx.fillStyle=textCol;ctx.font='500 8px DM Mono,monospace';ctx.textAlign='right';ctx.fillText(v>=1e6?'$'+(v/1e6).toFixed(1)+'M':'$'+Math.round(v/1000)+'K',pl-3,yP(v)+3);}});
+  ctx.fillStyle=textCol;ctx.font='500 8px DM Mono,monospace';ctx.textAlign='center';
+  [0,Math.round(ytr/2),ytr].forEach(i=>ctx.fillText(age+i,xP(i),H-pb+12));
+  const CRASHES=[{y:2008-2025+age,d:1.5,col:'rgba(166,48,32,.15)'},{y:2020-2025+age,d:.4,col:'rgba(184,135,42,.12)'}];
+  CRASHES.forEach(c=>{const ci=c.y;if(ci<0||ci>ytr)return;ctx.fillStyle=c.col;ctx.fillRect(xP(ci),pt,xP(Math.min(ci+c.d,ytr))-xP(ci),cH);});
   if(MO_brecha>0&&MO_brecha<=maxV){ctx.setLineDash([5,4]);ctx.strokeStyle='rgba(14,15,13,.2)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pl,yP(MO_brecha));ctx.lineTo(W-pr,yP(MO_brecha));ctx.stroke();ctx.setLineDash([]);}
-  ctx.beginPath();ctx.moveTo(xP(0),yP(0));
-  proj.forEach((v,i)=>{if(i===0)return;const x0=xP(i-1),y0=yP(proj[i-1]),x1=xP(i),y1=yP(v),cx=(x0+x1)/2;ctx.bezierCurveTo(cx,y0,cx,y1,x1,y1);});
-  ctx.strokeStyle='#4A7C59';ctx.lineWidth=2.5;ctx.stroke();
+  ctx.beginPath();ctx.moveTo(xP(0),yP(0));base.forEach((v,i)=>{if(i===0)return;const x0=xP(i-1),y0=yP(base[i-1]),x1=xP(i),y1=yP(v),cx=(x0+x1)/2;ctx.bezierCurveTo(cx,y0,cx,y1,x1,y1);});ctx.strokeStyle='rgba(14,15,13,.2)';ctx.lineWidth=1.5;ctx.stroke();
+  ctx.beginPath();ctx.moveTo(xP(0),yP(0));proj.forEach((v,i)=>{if(i===0)return;const x0=xP(i-1),y0=yP(proj[i-1]),x1=xP(i),y1=yP(v),cx=(x0+x1)/2;ctx.bezierCurveTo(cx,y0,cx,y1,x1,y1);});ctx.strokeStyle='#4A7C59';ctx.lineWidth=2.5;ctx.stroke();
   const ex=xP(ytr),ey=yP(proj[ytr]);ctx.beginPath();ctx.arc(ex,ey,4,0,Math.PI*2);ctx.fillStyle='#4A7C59';ctx.fill();
 }
 
 const W5D={longevity:.28,level:.20,volatility:.09,liquidity:.20,depletion:.24};
-function compute5D(incK,savPct,afortK,deudaK,extraAport,gastoRed,rate){
+function compute5D(incK,savPct,afortK,deudaK,extraAport,gastoRed,deudaLiq,pprAport,rate){
   const inc=incK*1000,ytr=Math.max(65-(S.age||38),2),mths=ytr*12,rm=Math.pow(1+rate,1/12)-1;
-  const aforePat=inc*.065+(extraAport+gastoRed*.5)*1000;
+  const aforePat=inc*.065+(extraAport+pprAport)*1000+(gastoRed*1000*.5);
+  const deudaEff=Math.max((deudaK-deudaLiq)*1000,0);
   const pat=afortK*1000+(mths>0?aforePat*((Math.pow(1+rm,mths)-1)/rm):0);
   const tr=Math.min(.26+Math.floor(Math.max((S.yrs||12)-25,0)/5)*.055,.60);
   const pen=inc*tr+3100,brecha=Math.max(50000-pen,0),MO=brecha*12*VP20;
@@ -1087,8 +1274,10 @@ function compute5D(incK,savPct,afortK,deudaK,extraAport,gastoRed,rate){
   if(pat>0&&brecha>0){const x=pat*rd/brecha;durYrs=x<1?Math.min((-Math.log(1-x)/Math.log(1+rd))/12,40):40;}
   else if(brecha===0)durYrs=40;
   const rateVol={0.015:9,0.020:8,0.030:6,0.045:4};
-  return{longevity:Math.min((durYrs/25)*10,10),level:Math.min((pen/50000)*10,10),volatility:rateVol[rate]||6,liquidity:Math.min(Math.max((pat/Math.max(MO,1))*8,1),10),depletion:Math.min((MO>0?Math.min(pat/MO,1.5):0)*7,10)};
+  const netPat=pat-deudaEff;
+  return{longevity:Math.min((durYrs/25)*10,10),level:Math.min((pen/50000)*10,10),volatility:rateVol[rate]||6,liquidity:Math.min(Math.max((netPat/Math.max(MO,1))*8,1),10),depletion:Math.min((MO>0?Math.min(pat/MO,1.5):0)*7,10)};
 }
+function score5DTotal(s){return Math.round((s.longevity*W5D.longevity+s.level*W5D.level+s.volatility*W5D.volatility+s.liquidity*W5D.liquidity+s.depletion*W5D.depletion)*10)/10;}
 function drawRadar(canvasId,current,proposed,avg){
   const canvas=document.getElementById(canvasId);if(!canvas)return;
   const ctx=canvas.getContext('2d'),dpr=window.devicePixelRatio||1;
@@ -1096,45 +1285,73 @@ function drawRadar(canvasId,current,proposed,avg){
   canvas.width=W*dpr;canvas.height=H*dpr;ctx.scale(dpr,dpr);ctx.clearRect(0,0,W,H);
   const cx=W/2,cy=H/2+10,R=Math.min(W,H)*.38;
   const axes=['longevity','level','volatility','liquidity','depletion'];
-  const labels=['Longevidad','Nivel pagos','Estabilidad','Liquidez','Sin depleción'];
-  const n=axes.length,angle=i=>(Math.PI*2/n)*i-Math.PI/2;
+  const labels=['Longevidad','Nivel de pagos','Estabilidad','Liquidez','Sin depleción'];
+  const angle=i=>(Math.PI*2/axes.length)*i-Math.PI/2;
   [2,4,6,8,10].forEach(v=>{ctx.beginPath();axes.forEach((_,i)=>{const a=angle(i),r=(v/10)*R;i===0?ctx.moveTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r):ctx.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);});ctx.closePath();ctx.strokeStyle='rgba(14,15,13,.07)';ctx.lineWidth=1;ctx.stroke();});
   axes.forEach((ax,i)=>{const a=angle(i);ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(cx+Math.cos(a)*R,cy+Math.sin(a)*R);ctx.strokeStyle='rgba(14,15,13,.15)';ctx.lineWidth=1;ctx.stroke();const lx=cx+Math.cos(a)*(R+18),ly=cy+Math.sin(a)*(R+18);ctx.fillStyle='rgba(14,15,13,.55)';ctx.font='500 9px DM Sans,sans-serif';ctx.textAlign=Math.abs(Math.cos(a))<.1?'center':Math.cos(a)>0?'left':'right';ctx.fillText(labels[i],lx,ly+3);});
   function drawPoly(scores,color,alpha,lineW,dash=[]){ctx.beginPath();ctx.setLineDash(dash);axes.forEach((ax,i)=>{const a=angle(i),r=(scores[ax]/10)*R;i===0?ctx.moveTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r):ctx.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);});ctx.closePath();ctx.fillStyle=color.replace(')',`,${alpha})`).replace('rgb','rgba');ctx.fill();ctx.strokeStyle=color;ctx.lineWidth=lineW;ctx.stroke();ctx.setLineDash([]);}
-  drawPoly(avg,'rgb(14,15,13)',.04,1.5,[4,3]);
-  drawPoly(current,'rgb(74,124,89)',.15,2.5);
-  drawPoly(proposed,'rgb(184,135,42)',.18,2.5);
+  drawPoly(avg,'rgb(14,15,13)',.04,1.5,[4,3]);drawPoly(current,'rgb(74,124,89)',.15,2.5);drawPoly(proposed,'rgb(184,135,42)',.18,2.5);
+  [current,proposed].forEach((scores,si)=>{const col=si===0?'#4A7C59':'#B8872A';axes.forEach((ax,i)=>{const a=angle(i),r=(scores[ax]/10)*R;ctx.beginPath();ctx.arc(cx+Math.cos(a)*r,cy+Math.sin(a)*r,3.5,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();});});
 }
 function update5D(){
   const aport=parseInt(document.getElementById('sl5Aport').value)||0;
   const gasto=parseInt(document.getElementById('sl5Gasto').value)||0;
+  const deuda=parseInt(document.getElementById('sl5Deuda').value)||0;
+  const ppr=parseInt(document.getElementById('sl5PPR').value)||0;
   const riskI=parseInt(document.getElementById('sl5Risk').value)||1;
   const rates=[.015,.030,.045],rLabels=['Conservador 1.5%','Moderado 3.0%','Agresivo 4.5%'],rate=rates[riskI];
-  const v5A=document.getElementById('v5Aport');if(v5A)v5A.textContent='$'+(aport*1000).toLocaleString('es-MX');
-  const v5G=document.getElementById('v5Gasto');if(v5G)v5G.textContent='$'+(gasto*1000).toLocaleString('es-MX');
-  const v5R=document.getElementById('v5Risk');if(v5R)v5R.textContent=rLabels[riskI];
+  document.getElementById('v5Aport').textContent='$'+(aport*1000).toLocaleString('es-MX');
+  document.getElementById('v5Gasto').textContent='$'+(gasto*1000).toLocaleString('es-MX');
+  document.getElementById('v5Deuda').textContent='$'+(deuda).toLocaleString('es-MX')+'K';
+  document.getElementById('v5PPR').textContent='$'+(ppr*1000).toLocaleString('es-MX');
+  document.getElementById('v5Risk').textContent=rLabels[riskI];
   const incK=parseFloat(document.getElementById('uInc').value)||S.inc||30;
   const aforeK=parseFloat(document.getElementById('uAfore').value)||250;
   const deudaK=parseFloat(document.getElementById('uDeuda').value)||0;
-  const current=compute5D(incK,0,aforeK,deudaK,0,0,S.effectiveRate||.030);
-  const proposed=compute5D(incK,0,aforeK,deudaK,aport,gasto,rate);
-  const avg={longevity:5.2,level:4.8,volatility:6,liquidity:4.5,depletion:4.0};
-  drawRadar('radar5D',current,proposed,avg);
+  const current=compute5D(incK,0,aforeK,deudaK,0,0,0,0,S.effectiveRate||.030);
+  const proposed=compute5D(incK,0,aforeK,deudaK,aport,gasto,deuda,ppr,rate);
+  const avgCohort={longevity:5.2,level:4.8,volatility:6,liquidity:4.5,depletion:4.0};
+  drawRadar('radar5D',current,proposed,avgCohort);
+  const impacts=[],fields=['longevity','level','volatility','liquidity','depletion'],fLabels=['Longevidad','Nivel de pagos','Estabilidad','Liquidez','Depleción'];
+  fields.forEach((f,i)=>{const diff=proposed[f]-current[f];if(Math.abs(diff)>=.3){const color=diff>0?'var(--sage-d)':'var(--danger)',arrow=diff>0?'↑':'↓';impacts.push(`<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span style="font-size:.78rem;color:var(--ink-60)">${fLabels[i]}</span><span style="font-family:'DM Mono',monospace;font-size:.8rem;color:${color};font-weight:500">${arrow}${Math.abs(diff).toFixed(1)} pts</span></div>`);}});
+  const scoreCur=score5DTotal(current),scoreProp=score5DTotal(proposed),scoreDiff=scoreProp-scoreCur;
+  document.getElementById('impactItems').innerHTML=impacts.length?impacts.join('')+`<div style="border-top:1px solid var(--mist);padding-top:8px;margin-top:6px;display:flex;justify-content:space-between"><span style="font-size:.78rem;font-weight:600;color:var(--ink)">Score total ponderado</span><span style="font-family:'DM Mono',monospace;font-size:.8rem;color:${scoreDiff>=0?'var(--sage-d)':'var(--danger)'};font-weight:600">${scoreDiff>=0?'+':''}${scoreDiff.toFixed(1)} → ${scoreProp.toFixed(1)}/10</span></div>`:'<div style="font-size:.78rem;color:var(--ink-30)">Mueve los controles para ver el impacto de tus acciones.</div>';
+  // IPR comparison table
+  const ytr=Math.max(65-(S.age||38),2),mths=ytr*12;
+  const tr2=Math.min(.26+Math.floor(Math.max((S.yrs||12)-25,0)/5)*.055,.60);
+  const pen2=(incK*1000)*tr2+3100,brecha2=Math.max(50000-pen2,0),MO2=brecha2*12*VP20;
+  const extraMth=(aport+ppr+gasto*.5)*1000,baseAport=(incK*1000)*.065;
+  const rows=[['Solo Afore base',0,0],[`+ Ahorro extra $${(aport*1000).toLocaleString('es-MX')}/mes`,aport*1000,0],[`+ Reducción gasto $${(gasto*1000).toLocaleString('es-MX')}/mes`,0,gasto*1000],[`+ PPR/Afore $${(ppr*1000).toLocaleString('es-MX')}/mes`,ppr*1000,0],['Todo junto',extraMth,0]];
+  const tbody=document.getElementById('iprTableBody');
+  if(tbody){tbody.innerHTML=rows.map(([lbl,extra,gastoR])=>{const totalMth=baseAport+extra+gastoR*.5;const iprRow=rateVal=>{const rm=Math.pow(1+rateVal,1/12)-1;const pat=mths>0?totalMth*((Math.pow(1+rm,mths)-1)/rm):0;return MO2>0?Math.min(Math.round(pat/MO2*100),200):0;};const i15=iprRow(.015),i30=iprRow(.030),i45=iprRow(.045),diff=i45-i15,bg=(extra>0||gastoR>0)?'rgba(74,124,89,.04)':'transparent';return `<tr style="border-bottom:1px solid rgba(14,15,13,.05);background:${bg}"><td style="padding:9px 12px;color:var(--ink);font-size:.8rem">${lbl}</td><td style="text-align:center;padding:9px 12px;font-family:'DM Mono',monospace;font-size:.82rem;color:${i15>=100?'var(--sage-d)':i15>=60?'var(--warn)':'var(--danger)'}">${i15}%</td><td style="text-align:center;padding:9px 12px;font-family:'DM Mono',monospace;font-size:.82rem;color:${i30>=100?'var(--sage-d)':i30>=60?'var(--warn)':'var(--danger)'}">${i30}%</td><td style="text-align:center;padding:9px 12px;font-family:'DM Mono',monospace;font-size:.82rem;color:${i45>=100?'var(--sage-d)':i45>=60?'var(--warn)':'var(--danger)'}">${i45}%</td><td style="text-align:right;padding:9px 12px;font-family:'DM Mono',monospace;font-size:.8rem;color:var(--sage-d);font-weight:500">+${diff}%</td></tr>`;}).join('');}
+  const actions=[];
+  if(aport>0)actions.push(`aportar $${(aport*1000).toLocaleString('es-MX')}/mes adicionales`);
+  if(gasto>0)actions.push(`reducir gastos en $${(gasto*1000).toLocaleString('es-MX')}/mes`);
+  if(deuda>0)actions.push(`liquidar $${deuda}K de deuda`);
+  if(ppr>0)actions.push(`destinar $${(ppr*1000).toLocaleString('es-MX')}/mes a PPR o Afore`);
+  const prTxt=document.getElementById('monthlyPractice');
+  if(prTxt){if(actions.length){prTxt.innerHTML=`Este mes te comprometes a: <strong>${actions.join(', ')}</strong>. Eso mejora tu score 5D en <strong>${scoreDiff>=0?'+':''}${scoreDiff.toFixed(1)} puntos</strong>.`;}else{prTxt.textContent='Mueve los controles para definir tu compromiso del mes.';}}
+}
+function saveMonthlyDecision(){
+  const aport=parseInt(document.getElementById('sl5Aport').value)||0;
+  const gasto=parseInt(document.getElementById('sl5Gasto').value)||0;
+  const deuda=parseInt(document.getElementById('sl5Deuda').value)||0;
+  const ppr=parseInt(document.getElementById('sl5PPR').value)||0;
+  if(!aport&&!gasto&&!deuda&&!ppr){alert('Define al menos una acción primero.');return;}
+  S.commitments=S.commitments||[];S.commitments.unshift({date:new Date().toISOString().slice(0,10),aport,gasto,deuda,ppr});saveS();
+  alert(`✓ Compromiso guardado.\nRegresa el mes siguiente para actualizar tu IPR.`);
 }
 
-// ══ INIT — THE KEY FIX ══
-// Do NOT call resetS1() on DOMContentLoaded — it hides s0 content
-// Just call goScreen('s0') after everything is ready
+// ══ INIT — FIX APLICADO: sin resetS1() en DOMContentLoaded ══
 (function init(){
   updateJBar('s0');
   window.addEventListener('load',()=>{
     setTimeout(()=>{
       drawUrgChart(null);
       window.scrollTo(0,0);
-      // Ensure s0 is active and visible
+      // Garantizar que s0 esté activo
       document.querySelectorAll('.screen').forEach(s=>{s.classList.remove('active');s.style.display='none';});
-      const s0=document.getElementById('s0');
-      if(s0){s0.style.display='';s0.classList.add('active');}
+      const s0=document.getElementById('s0');if(s0){s0.style.display='';s0.classList.add('active');}
       updateJBar('s0');
     },50);
   });
